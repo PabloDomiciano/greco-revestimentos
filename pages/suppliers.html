@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rede de Fornecedores | Greco Revestimentos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/suppliers/suppliers.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <a href="#" class="logo">
+            <div class="logo-text">
+              <img
+                src="../assets/logo.png"
+                alt="Greco Revestimentos Logo"
+                class="logo-image"
+              />
+            </div>
+          </a>
+          <ul class="nav-links">
+            <li><a href="../index.html">INÍCIO</a></li>
+            <li><a href="about.html">SOBRE</a></li>
+            <li><a href="#gallery">GALERIA</a></li>
+            <li><a href="#products">PRODUTOS</a></li>
+            <li><a href="#products">ONDE ENCONTRAR</a></li>
+            <li><a href="#contact">CONTATO</a></li>
+          </ul>
+          <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <section id="suppliers-hero" class="suppliers-hero">
+      <!-- Vídeo em loop -->
+      <div class="suppliers-video-container">
+        <video class="suppliers-video" autoplay muted loop playsinline>
+          <source src="../assets/videos/video.mp4" type="video/mp4" />
+          Seu navegador não suporta vídeos HTML5.
+        </video>
+      </div>
+
+      <!-- Redes sociais -->
+      <div class="social-sidebar">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </section>
+
+    <section id="suppliers" class="suppliers">
+      <div class="container-suppliers">
+        <h2 class="section-title">NOSSA REDE DE FORNECEDORES</h2>
+        <div class="services-grid">
+          <p style="text-align: center">
+            Encontre os revendedores autorizados Greco Revestimentos mais
+            próximos de você
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <main class="main-content" id="fornecedores">
+      <div class="container">
+        <div class="filter-container">
+          <button class="filter-btn active" data-filter="todos">Todos</button>
+          <button class="filter-btn" data-filter="maringa">Maringá</button>
+          <button class="filter-btn" data-filter="arapongas">Arapongas</button>
+          <button class="filter-btn" data-filter="umuarama">Umuarama</button>
+          <button class="filter-btn" data-filter="outras">
+            Outras Cidades
+          </button>
+        </div>
+
+        <div class="cards-container">
+          <!-- Fornecedores de Maringá -->
+          <div class="card" data-cidade="maringa">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Maringá</span
+              >
+              <span class="nome-fornecedor">Japurá Acabamentos</span>
+              <span class="endereco"
+                >Av. Colombo, 4745 - Zona 7, Maringá - PR, 87030-121</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Av. Colombo, 4745 - Zona 7, Maringá - PR, 87030-121"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="maringa">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Maringá</span
+              >
+              <span class="nome-fornecedor"
+                >Bella Pedra - Pedras Decorativas</span
+              >
+              <span class="endereco"
+                >Av. Brasil, 6670 - Zona 05, Maringá - PR, 87015-280</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Av. Brasil, 6670 - Zona 05, Maringá - PR, 87015-280"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="maringa">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Maringá</span
+              >
+              <span class="nome-fornecedor">Casa São Paulo</span>
+              <span class="endereco"
+                >Av. Colombo, 7838 - Zona 06, Maringá - PR, 87030-120</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Av. Colombo, 7838 - Zona 06, Maringá - PR, 87030-120"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="maringa">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Maringá</span
+              >
+              <span class="nome-fornecedor">Igui Piscinas</span>
+              <span class="endereco"
+                >Av. Colombo, Nº 4921 - Zona 7, Maringá - PR, 87030-121</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Av. Colombo, Nº 4921 - Zona 7, Maringá - PR, 87030-121"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="maringa">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Maringá</span
+              >
+              <span class="nome-fornecedor">Mais Casa</span>
+              <span class="endereco"
+                >Av. Colombo, 3017 - Zona 7, Maringá - PR, 87030-120</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Av. Colombo, 3017 - Zona 7, Maringá - PR, 87030-120"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <!-- Fornecedores de Arapongas -->
+          <div class="card" data-cidade="arapongas">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Arapongas</span
+              >
+              <span class="nome-fornecedor">Jateliê Casa e Construção</span>
+              <span class="endereco"
+                >R. Condor, 916 - Centro, Arapongas - PR, 86700-035</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=R. Condor, 916 - Centro, Arapongas - PR, 86700-035"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="arapongas">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa.map-marker-alt"></i> Arapongas</span
+              >
+              <span class="nome-fornecedor">Jateliê Conceito</span>
+              <span class="endereco"
+                >R. Condor, 923 - Centro, Arapongas - PR, 86700-035</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=R. Condor, 923 - Centro, Arapongas - PR, 86700-035"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <!-- Fornecedores de Umuarama -->
+          <div class="card" data-cidade="umuarama">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Umuarama</span
+              >
+              <span class="nome-fornecedor"
+                >Construmil Materiais Para Construção</span
+              >
+              <span class="endereco"
+                >Praça Miguel Rossafa, 5595 - Zona III, Umuarama - PR,
+                87502-240</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Praça Miguel Rossafa, 5595 - Zona III, Umuarama - PR, 87502-240"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <!-- Outras cidades -->
+          <div class="card" data-cidade="outras">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Jandaia do Sul</span
+              >
+              <span class="nome-fornecedor">Casa São Paulo</span>
+              <span class="endereco"
+                >Av. Dr. Getúlio Vargas, 665 - Jandaia do Sul, PR,
+                36900-000</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Av. Dr. Getúlio Vargas, 665 - Jandaia do Sul, PR, 36900-000"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Cianorte</span
+              >
+              <span class="nome-fornecedor">Igui Piscinas</span>
+              <span class="endereco"
+                >Tv. Itá, 50 - Zona de Armazém, Cianorte - PR, 87212-899</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Tv. Itá, 50 - Zona de Armazém, Cianorte - PR, 87212-899"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Cianorte</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã Ltda</span>
+              <span class="endereco"
+                >Av. América, 4525 - Zona 1, Cianorte - PR, 87200-000</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Av. América, 4525 - Zona 1, Cianorte - PR, 87200-000"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Paranavaí</span
+              >
+              <span class="nome-fornecedor">Casa Grande Acabamentos</span>
+              <span class="endereco"
+                >R. Manoel Ribas, 1560 - Centro, Paranavaí - PR, 87704-000</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=R. Manoel Ribas, 1560 - Centro, Paranavaí - PR, 87704-000"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Guaíra</span
+              >
+              <span class="nome-fornecedor">Lazer Piscinas</span>
+              <span class="endereco"
+                >Av. Alm. Tamandaré, 1270 - Centro, Guaíra - PR, 85980-000</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Av. Alm. Tamandaré, 1270 - Centro, Guaíra - PR, 85980-000"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Ivaiporã</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã Ltda</span>
+              <span class="endereco"
+                >Av. Paraná, 1340 - Centro, Ivaiporã - PR, 86870-000</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Av. Paraná, 1340 - Centro, Ivaiporã - PR, 86870-000"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Ibiporã</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã Ltda</span>
+              <span class="endereco"
+                >R. Ronat Valter Sodré, 180 - Vila Martins, Ibiporã - PR,
+                86200-000</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=R. Ronat Valter Sodré, 180 - Vila Martins, Ibiporã - PR, 86200-000"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Telêmaco Borba</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã Ltda</span>
+              <span class="endereco"
+                >R. Ângelo dal'Col Júnior, 20 - Centro, Telêmaco Borba</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=R. Ângelo dal'Col Júnior, 20 - Centro, Telêmaco Borba"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="#" class="logo">
+              <div class="logo-text">
+                <img
+                  src="../assets/logo-footer.png"
+                  alt="Greco Revestimentos Logo"
+                  class="logo-image"
+                />
+              </div>
+            </a>
+            <p>
+              Especialistas em revestimentos premium, transformando espaços com
+              qualidade, inovação e design minimalista.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Links Rápidos</h4>
+            <ul class="footer-links">
+              <li><a href="#home">Início</a></li>
+              <li><a href="#about">Sobre Nós</a></li>
+              <li><a href="#products">Produtos</a></li>
+              <li><a href="#services">Galeria</a></li>
+              <li><a href="#contact">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Produtos</h4>
+            <ul class="footer-links">
+              <li><a href="#">Revestimento em Fibra</a></li>
+              <li><a href="#">Revestimento Cerâmico</a></li>
+              <li><a href="#">Revestimento Premium</a></li>
+              <li><a href="#">Revestimento Texturizado</a></li>
+              <li><a href="#">Acessórios</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Suporte</h4>
+            <ul class="footer-links">
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Manual de Instalação</a></li>
+              <li><a href="#">Manutenção</a></li>
+              <li><a href="#">Garantia</a></li>
+              <li><a href="#">Política de Privacidade</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 GRECO. Todos os direitos reservados. Revestimentos
+            Premium.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/suppliers.js"></script>
+  </body>
+</html>
