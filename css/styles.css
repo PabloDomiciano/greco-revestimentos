@@ -83,7 +83,7 @@ section {
 
 /* ==========================================================================
            HEADER
-           ========================================================================== */
+========================================================================== */
 header {
   background: var(--secondary-color);
   position: fixed;
@@ -111,45 +111,20 @@ nav {
 
 .logo-image {
   transition: var(--transition);
-  width: 160px; /* Tamanho padrão do logo */
-}
-
-.logo-controls {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-left: 15px;
-}
-
-.size-btn {
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  transition: var(--transition);
-}
-
-.size-btn:hover {
-  background: var(--accent-color);
+  width: 160px;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
   gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
   text-decoration: none;
   color: var(--text-color);
-  font-weight: 500;
   transition: var(--transition);
   position: relative;
   padding: 8px 0;
@@ -179,10 +154,74 @@ nav {
   display: none;
   background: none;
   border: none;
-  font-size: 1.5rem;
-  color: var(--primary-color);
+  font-size: 24px;
   cursor: pointer;
+  color: #333;
+  z-index: 1001;
 }
+
+/* Media query para mobile */
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 2rem;
+  }
+
+  .nav-links.active {
+    right: 0;
+    display: flex;
+  }
+
+  .nav-links li {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links.active li {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+    padding: 12px 0;
+    display: block;
+    width: 100%;
+  }
+
+  /* Overlay quando menu está aberto */
+  body.menu-open::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+}
+
 
 /* ==========================================================================
            HERO SECTION
@@ -1004,10 +1043,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
   .hero h1 {
     font-size: 2rem;
   }
