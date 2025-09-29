@@ -44,3 +44,26 @@
   object-fit: cover;
   display: block;
 }
+
+/* Media Queries para responsividade */
+@media (min-width: 768px) {
+  .about {
+    height: 113vh; /* Mantém altura original em tablets */
+  }
+
+  .about-container-about {
+    flex-direction: row; /* Volta para linha em tablets+ */
+    align-items: stretch;
+  }
+
+  .about-image-about {
+    height: 100%; /* Volta altura total */
+  }
+}
+
+@media (min-width: 1024px) {
+  .about {
+    height: 113vh; /* Mantém altura em desktop */
+  }
+}
+
