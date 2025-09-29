@@ -60,11 +60,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Atualiza o contador de resultados
   function updateResultsCounter(count) {
     if (activeFilter === "todos" && searchTerm === "") {
-      resultsCounter.textContent = `Mostrando todos os ${count} fornecedores`;
+      resultsCounter.textContent = `Mostrando todos os ${count} lojistas`;
     } else if (activeFilter !== "todos" && searchTerm === "") {
       const filterText =
         document.querySelector(".filter-btn.active").textContent;
-      resultsCounter.textContent = `${count} fornecedores em ${filterText}`;
+      resultsCounter.textContent = `${count} lojistas em ${filterText}`;
     } else if (activeFilter === "todos" && searchTerm !== "") {
       resultsCounter.textContent = `${count} resultados para "${searchTerm}"`;
     } else {
