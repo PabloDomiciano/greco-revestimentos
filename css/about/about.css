@@ -59,6 +59,7 @@
   .about-image-about {
     height: 100%; /* Volta altura total */
   }
+
 }
 
 @media (min-width: 1024px) {

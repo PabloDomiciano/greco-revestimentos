@@ -50,21 +50,34 @@
     <!-- Seção de Produtos -->
     <section class="produtos">
       <h2 class="section-title">NOSSOS PRODUTOS</h2>
+
+      <!-- Filtros -->
+      <div class="filtros-container">
+        <div class="filtros">
+          <button class="filtro-btn active" data-categoria="todos">
+            TODOS
+          </button>
+          <button class="filtro-btn" data-categoria="piscina">PISCINA</button>
+          <button class="filtro-btn" data-categoria="revestimentos">
+            REVESTIMENTOS
+          </button>
+        </div>
+      </div>
+
+
       <div class="grid-produtos">
-        <!-- Card 1 -->
-        <div class="card">
+        <!-- Card 1 - Revestimentos -->
+        <div class="card" data-categoria="revestimentos">
           <div
             class="card-image"
-            style="
-              background-image: url('../assets/images/catalog/moledo.JPG');
-            "
+            style="background-image: url('../assets/images/catalog/moledo.JPG')"
           ></div>
           <div class="selo-lancamento">LANÇAMENTO</div>
           <div class="nome-produto">MOLEDO</div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="card">
+        <!-- Card 2 - Revestimentos -->
+        <div class="card" data-categoria="revestimentos">
           <div
             class="card-image"
             style="
@@ -75,8 +88,8 @@
           <div class="nome-produto">ETRUSCO</div>
         </div>
 
-        <!-- Card 3 -->
-        <div class="card">
+        <!-- Card 3 - Revestimentos -->
+        <div class="card" data-categoria="revestimentos">
           <div
             class="card-image"
             style="
@@ -87,8 +100,8 @@
           <div class="nome-produto">MOSAICO ETRUSCO</div>
         </div>
 
-        <!-- Card 4 -->
-        <div class="card">
+        <!-- Card 4 - Revestimentos -->
+        <div class="card" data-categoria="revestimentos">
           <div
             class="card-image"
             style="
@@ -99,32 +112,28 @@
           <div class="nome-produto">RIPADO</div>
         </div>
 
-        <!-- Card 5 -->
-        <div class="card">
+        <!-- Card 5 - Revestimentos -->
+        <div class="card" data-categoria="revestimentos">
           <div
             class="card-image"
-                style="
-                background-image: url('../assets/images/catalog/cobogo.jpg');
-            "
+            style="background-image: url('../assets/images/catalog/cobogo.jpg')"
           ></div>
           <div class="selo-lancamento">LANÇAMENTO</div>
           <div class="nome-produto">COBOGÓ</div>
         </div>
 
-        <!-- Card 6 -->
-        <div class="card">
+        <!-- Card 6 - Revestimentos -->
+        <div class="card" data-categoria="revestimentos">
           <div
             class="card-image"
-            style="
-              background-image: url('../assets/images/catalog/arezo.jpg');
-            "
+            style="background-image: url('../assets/images/catalog/arezo.jpg')"
           ></div>
           <div class="selo-lancamento">LANÇAMENTO</div>
           <div class="nome-produto">AREZO</div>
         </div>
 
-        <!-- Card 7 -->
-        <div class="card">
+        <!-- Card 7 - Revestimentos -->
+        <div class="card" data-categoria="revestimentos">
           <div
             class="card-image"
             style="
@@ -135,8 +144,8 @@
           <div class="nome-produto">ERETRIA</div>
         </div>
 
-        <!-- Card 8 -->
-        <div class="card">
+        <!-- Card 8 - Revestimentos -->
+        <div class="card" data-categoria="revestimentos">
           <div
             class="card-image"
             style="
@@ -273,5 +282,6 @@
     <script src="../js/header.js"></script>
     <script src="../js/products-carousel.js"></script>
     <script src="../js/hero-slider.js"></script>
+    <script src="../js/products-filter.js"></script>
   </body>
 </html>

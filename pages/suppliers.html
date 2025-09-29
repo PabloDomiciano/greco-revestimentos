@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rede de Fornecedores | Greco Revestimentos</title>
+    <title>Rede de Lojistas | Greco Revestimentos</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -59,14 +59,55 @@
 
     <main class="main-content" id="fornecedores">
       <div class="container">
+        <!-- Filtros melhorados -->
         <div class="filter-container">
-          <button class="filter-btn active" data-filter="todos">Todos</button>
-          <button class="filter-btn" data-filter="maringa">Maringá</button>
-          <button class="filter-btn" data-filter="arapongas">Arapongas</button>
-          <button class="filter-btn" data-filter="umuarama">Umuarama</button>
-          <button class="filter-btn" data-filter="outras">
-            Outras Cidades
-          </button>
+          <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input
+              type="text"
+              class="search-input"
+              id="searchInput"
+              placeholder="Buscar por cidade ou nome do fornecedor..."
+            />
+          </div>
+
+          <div class="filter-section">
+            <h3><i class="fas fa-filter"></i> Filtros Principais</h3>
+            <div class="filter-buttons">
+              <button class="filter-btn active" data-filter="todos">
+                Todas as Lojas
+              </button>
+              <button class="filter-btn" data-filter="maringa">Maringá</button>
+              <button class="filter-btn" data-filter="arapongas">
+                Arapongas
+              </button>
+              <button class="filter-btn" data-filter="umuarama">
+                Umuarama
+              </button>
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <h3>
+              <i class="fas fa-map-marker-alt"></i> Outras Cidades por Região
+            </h3>
+            <div class="filter-buttons">
+              <button class="filter-btn" data-filter="norte">
+                Norte do PR
+              </button>
+              <button class="filter-btn" data-filter="centro">
+                Centro do PR
+              </button>
+              <button class="filter-btn" data-filter="oeste">
+                Oeste do PR
+              </button>
+              <button class="filter-btn" data-filter="sul">Sul do PR</button>
+            </div>
+          </div>
+
+          <div class="results-counter" id="resultsCounter">
+            Mostrando todas as lojas
+          </div>
         </div>
 
         <div class="cards-container">
@@ -168,8 +209,28 @@
             </a>
           </div>
 
+          <div class="card" data-cidade="maringa" data-regiao="oeste">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Maringá</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >Av. Colombo - Zona 07, Nº 4103 - 87030-120<br />
+                Telefone: (44) 3047-1234</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Av. Colombo, 4103 - Zona 7, Maringá - PR, 87030-120"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
           <!-- Fornecedores de Arapongas -->
-          <div class="card" data-cidade="arapongas">
+          <div class="card" data-cidade="arapongas" data-regiao="norte">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Arapongas</span
@@ -188,7 +249,7 @@
             </a>
           </div>
 
-          <div class="card" data-cidade="arapongas">
+          <div class="card" data-cidade="arapongas" data-regiao="norte">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Arapongas</span
@@ -208,7 +269,7 @@
           </div>
 
           <!-- Fornecedores de Umuarama -->
-          <div class="card" data-cidade="umuarama">
+          <div class="card" data-cidade="umuarama" data-regiao="oeste">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Umuarama</span
@@ -230,8 +291,8 @@
             </a>
           </div>
 
-          <!-- Outras cidades -->
-          <div class="card" data-cidade="outras">
+          <!-- Jandaia do Sul -->
+          <div class="card" data-cidade="outras" data-regiao="norte">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Jandaia do Sul</span
@@ -251,7 +312,8 @@
             </a>
           </div>
 
-          <div class="card" data-cidade="outras">
+          <!-- Cianorte -->
+          <div class="card" data-cidade="outras" data-regiao="oeste">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Cianorte</span
@@ -270,14 +332,15 @@
             </a>
           </div>
 
-          <div class="card" data-cidade="outras">
+          <div class="card" data-cidade="outras" data-regiao="oeste">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Cianorte</span
               >
-              <span class="nome-fornecedor">Comercial Ivaiporã Ltda</span>
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
               <span class="endereco"
-                >Av. América, 4525 - Zona 1, Cianorte - PR, 87200-000</span
+                >Av. América - Zona 01, Nº 4525 - 87200-266<br />
+                Telefone: (44) 3629-9898</span
               >
             </div>
             <a
@@ -289,7 +352,8 @@
             </a>
           </div>
 
-          <div class="card" data-cidade="outras">
+          <!-- Paranavaí -->
+          <div class="card" data-cidade="outras" data-regiao="norte">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Paranavaí</span
@@ -308,7 +372,28 @@
             </a>
           </div>
 
-          <div class="card" data-cidade="outras">
+          <div class="card" data-cidade="outras" data-regiao="oeste">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Paranavaí</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >Av. Paraná - Centro, Nº 1615 - 87708-030<br />
+                Telefone: (44) 3422-6200</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Av. Paraná, 1615 - Centro, Paranavaí - PR, 87708-030"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <!-- Guaíra -->
+          <div class="card" data-cidade="outras" data-regiao="oeste">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Guaíra</span
@@ -327,14 +412,137 @@
             </a>
           </div>
 
-          <div class="card" data-cidade="outras">
+          <!-- Região Norte do PR -->
+          <div class="card" data-cidade="outras" data-regiao="norte">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Apucarana</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >Av. Curitiba - Centro, Nº 1580 - 86800-070<br />
+                Telefone: (43) 3422-1361</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Av. Curitiba, 1580 - Centro, Apucarana - PR, 86800-070"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras" data-regiao="norte">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Cambé</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >R. Belo Horizonte - Centro, Nº 176 - 86181-000<br />
+                Telefone: (43) 3254-2468</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=R. Belo Horizonte, 176 - Centro, Cambé - PR, 86181-000"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras" data-regiao="norte">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Ibiporã</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >R. Ronalt Walter Sodré - Centro, Nº 180 - 86206-006<br />
+                Telefone: (43) 3258-1319</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=R. Ronalt Walter Sodré, 180 - Centro, Ibiporã - PR, 86206-006"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras" data-regiao="norte">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Rolândia</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >Av. Presidente Getúlio Vargas - Centro, Nº 1614 - 86600-099<br />
+                Telefone: (43) 3256-0060</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Av. Presidente Getúlio Vargas, 1614 - Centro, Rolândia - PR, 86600-099"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras" data-regiao="norte">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Faxinal</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >R. José Martins Vieira - Centro, Nº 375 - 86840-000<br />
+                Telefone: (43) 3461-1215</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=R. José Martins Vieira, 375 - Centro, Faxinal - PR, 86840-000"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras" data-regiao="norte">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Mandaguari</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >R. Dom Pedro II - Centro, Nº 340 - 86975-000<br />
+                Telefone: (44) 3233-6000</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=R. Dom Pedro II, 340 - Centro, Mandaguari - PR, 86975-000"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <!-- Região Centro do PR -->
+          <div class="card" data-cidade="outras" data-regiao="centro">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Ivaiporã</span
               >
-              <span class="nome-fornecedor">Comercial Ivaiporã Ltda</span>
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
               <span class="endereco"
-                >Av. Paraná, 1340 - Centro, Ivaiporã - PR, 86870-000</span
+                >Av. Paraná - Centro, Nº 1340 - 86870-000<br />
+                Telefone: (43) 3472-8000</span
               >
             </div>
             <a
@@ -346,19 +554,19 @@
             </a>
           </div>
 
-          <div class="card" data-cidade="outras">
+          <div class="card" data-cidade="outras" data-regiao="centro">
             <div>
               <span class="cidade"
-                ><i class="fas fa-map-marker-alt"></i> Ibiporã</span
+                ><i class="fas fa-map-marker-alt"></i> Ivaiporã Castelo</span
               >
-              <span class="nome-fornecedor">Comercial Ivaiporã Ltda</span>
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
               <span class="endereco"
-                >R. Ronat Valter Sodré, 180 - Vila Martins, Ibiporã - PR,
-                86200-000</span
+                >Av. Paraná - Centro, Nº 430 - 86870-000<br />
+                Telefone: (43) 3472-4321</span
               >
             </div>
             <a
-              href="https://maps.google.com/?q=R. Ronat Valter Sodré, 180 - Vila Martins, Ibiporã - PR, 86200-000"
+              href="https://maps.google.com/?q=Av. Paraná, 430 - Centro, Ivaiporã - PR, 86870-000"
               target="_blank"
               class="btn-mapa"
             >
@@ -366,18 +574,322 @@
             </a>
           </div>
 
-          <div class="card" data-cidade="outras">
+          <div class="card" data-cidade="outras" data-regiao="centro">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Jardim Alegre</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >R. Dom Pedro II - Centro, Nº 55 - 86860-000<br />
+                Telefone: (43) 3475-1484</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=R. Dom Pedro II, 55 - Centro, Jardim Alegre - PR, 86860-000"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras" data-regiao="centro">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> São João do Ivaí</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >Praça Duque de Caxias Esq. C/ R. Paraíba - Centro, Nº 154 -
+                86930-000<br />
+                Telefone: (43) 3477-1420</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Praça Duque de Caxias, 154 - Centro, São João do Ivaí - PR, 86930-000"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras" data-regiao="centro">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Cândido de Abreu</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >Av. Paraná - Centro, Nº 1035 - 84470-000<br />
+                Telefone: (43) 3476-1261</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Av. Paraná, 1035 - Centro, Cândido de Abreu - PR, 84470-000"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras" data-regiao="centro">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Manoel Ribas</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >R. 07 de Setembro - Centro, Nº 999 - 85260-000<br />
+                Telefone: (43) 3435-1434</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=R. 07 de Setembro, 999 - Centro, Manoel Ribas - PR, 85260-000"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <!-- Região Oeste do PR -->
+          <div class="card" data-cidade="outras" data-regiao="oeste">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Campo Mourão</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >Av. Capitão Índio Bandeira - Centro, Nº 3000 - 87303-110<br />
+                Telefone: (44) 3599-7000</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Av. Capitão Índio Bandeira, 3000 - Centro, Campo Mourão - PR, 87303-110"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras" data-regiao="oeste">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Roncador</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >Av. São Pedro - Centro, Nº 357 - 87320-000<br />
+                Telefone: (44) 3575-2000</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Av. São Pedro, 357 - Centro, Roncador - PR, 87320-000"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <!-- Região Sul do PR -->
+          <div class="card" data-cidade="outras" data-regiao="sul">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Guarapuava</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >Av. Prof. Moacir J. Silvestre - Centro, Nº 1155 - 85010-090<br />
+                Telefone: (42) 3622-1000</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Av. Prof. Moacir J. Silvestre, 1155 - Centro, Guarapuava - PR, 85010-090"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras" data-regiao="sul">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Laranjeiras do Sul</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >R. XV de Novembro - Centro, Nº 2471 - 85301-050<br />
+                Telefone: (42) 3635-1547</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=R. XV de Novembro, 2471 - Centro, Laranjeiras do Sul - PR, 85301-050"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras" data-regiao="sul">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Palmital</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >R. Quinze de Novembro - Centro, Nº 1027 - 85270-000<br />
+                Telefone: (42) 3657-1491</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=R. Quinze de Novembro, 1027 - Centro, Palmital - PR, 85270-000"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras" data-regiao="sul">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Pitanga</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >Av. Brasil - Centro, Nº 550 - 85200-000<br />
+                Telefone: (42) 3646-1239</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Av. Brasil, 550 - Centro, Pitanga - PR, 85200-000"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras" data-regiao="sul">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Reserva</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >R. Benjamim Constant - Centro, Nº 339 - 84320-000<br />
+                Telefone: (42) 3276-1892</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=R. Benjamim Constant, 339 - Centro, Reserva - PR, 84320-000"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras" data-regiao="sul">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> São João do Triunfo</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >Av. Quinze de Novembro, 160 - Centro, 84150-000<br />
+                Telefone: (42) 3447-1292</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Av. Quinze de Novembro, 160 - Centro, São João do Triunfo - PR, 84150-000"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras" data-regiao="sul">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> São Mateus do Sul</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >R. Altino Ferreira de Lima - Centro, Nº 1809 - 83900-000<br />
+                Telefone: (42) 3520-1800</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=R. Altino Ferreira de Lima, 1809 - Centro, São Mateus do Sul - PR, 83900-000"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras" data-regiao="sul">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Telêmaco Borba</span
               >
-              <span class="nome-fornecedor">Comercial Ivaiporã Ltda</span>
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
               <span class="endereco"
-                >R. Ângelo dal'Col Júnior, 20 - Centro, Telêmaco Borba</span
+                >Av. Des. Edmund M. Júnior - Centro, Nº 20 - 84261-010<br />
+                Telefone: (42) 3272-0606</span
               >
             </div>
             <a
-              href="https://maps.google.com/?q=R. Ângelo dal'Col Júnior, 20 - Centro, Telêmaco Borba"
+              href="https://maps.google.com/?q=Av. Des. Edmund M. Júnior, 20 - Centro, Telêmaco Borba - PR, 84261-010"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras" data-regiao="sul">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Turvo</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >R. Eucalina Nunes - Centro, Nº 601 - 85150-000<br />
+                Telefone: (42) 3642-2410</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=R. Eucalina Nunes, 601 - Centro, Turvo - PR, 85150-000"
+              target="_blank"
+              class="btn-mapa"
+            >
+              <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+            </a>
+          </div>
+
+          <div class="card" data-cidade="outras" data-regiao="sul">
+            <div>
+              <span class="cidade"
+                ><i class="fas fa-map-marker-alt"></i> Pontal do Paraná</span
+              >
+              <span class="nome-fornecedor">Comercial Ivaiporã</span>
+              <span class="endereco"
+                >Rod. PR 412, KM 0,7 - Balneário Grajaú, Nº 155 - 83255-000<br />
+                Telefone: (41) 3457-9379</span
+              >
+            </div>
+            <a
+              href="https://maps.google.com/?q=Rod. PR 412, KM 0,7 - Balneário Grajaú, 155 - Pontal do Paraná - PR, 83255-000"
               target="_blank"
               class="btn-mapa"
             >
@@ -385,6 +897,12 @@
             </a>
           </div>
         </div>
+      </div>
+
+      <div class="no-results hidden" id="noResults">
+        <i class="fas fa-search"></i>
+        <h3>Nenhum fornecedor encontrado</h3>
+        <p>Tente ajustar os filtros ou a busca para ver mais resultados.</p>
       </div>
     </main>
 
