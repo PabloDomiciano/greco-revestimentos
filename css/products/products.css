@@ -36,7 +36,6 @@
   position: relative;
   height: 300px;
   overflow: hidden;
-  border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
@@ -87,7 +86,6 @@
   letter-spacing: 1.5px;
   text-transform: uppercase;
   z-index: 2;
-  border-radius: 2px;
 }
 
 .nome-produto {
