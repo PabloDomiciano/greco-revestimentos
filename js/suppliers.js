@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     cards.forEach((card) => {
       const cidade = card.getAttribute("data-cidade");
-      const regiao = card.getAttribute("data-regiao");
       const nomeFornecedor = card
         .querySelector(".nome-fornecedor")
         .textContent.toLowerCase();
@@ -29,8 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (activeFilter === "todos") {
         filterMatch = true;
       } else if (activeFilter === cidade) {
-        filterMatch = true;
-      } else if (activeFilter === regiao) {
         filterMatch = true;
       }
 
