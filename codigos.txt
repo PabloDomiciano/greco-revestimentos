@@ -1,0 +1,20 @@
+
+  Section HERO com vídeo!
+  
+    <section id="suppliers-hero" class="suppliers-hero">
+      <!-- Vídeo em loop -->
+      <div class="suppliers-video-container">
+        <video class="suppliers-video" autoplay muted loop playsinline>
+          <source src="../assets/videos/video.mp4" type="video/mp4" />
+          Seu navegador não suporta vídeos HTML5.
+        </video>
+      </div>
+
+      <!-- Redes sociais -->
+      <div class="social-sidebar">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </section>
