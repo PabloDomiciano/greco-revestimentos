@@ -15,7 +15,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../../../assets/css/styles.css" />
-    <link rel="stylesheet" href="../../../assets/css/products/products-page.css" />
+    <link
+      rel="stylesheet"
+      href="../../../assets/css/products/products-page.css"
+    />
   </head>
   <body>
     <!-- Header -->
@@ -124,9 +127,10 @@
             <div class="product-description">
               <h2>Descrição do Produto</h2>
               <p>
-                O Etrusco é um revestimento de parede que traz elegância clássica
-                e moderna para qualquer ambiente. Com formato quadrado de 50×50cm,
-                oferece perfeita simetria e versatilidade na aplicação.
+                O Etrusco é um revestimento de parede que traz elegância
+                clássica e moderna para qualquer ambiente. Com formato quadrado
+                de 50×50cm, oferece perfeita simetria e versatilidade na
+                aplicação.
               </p>
             </div>
 
@@ -293,54 +297,6 @@
 
     <!-- Scripts -->
     <script src="../../../assets/js/header.js"></script>
-    <script>
-      // Product Gallery Slider
-      class ProductGallery {
-        constructor() {
-          this.currentSlide = 0;
-          this.slides = document.querySelectorAll(".gallery-slide");
-          this.thumbnails = document.querySelectorAll(".thumbnail");
-          this.prevBtn = document.querySelector(".gallery-prev");
-          this.nextBtn = document.querySelector(".gallery-next");
-
-          this.init();
-        }
-
-        init() {
-          this.prevBtn.addEventListener("click", () => this.prevSlide());
-          this.nextBtn.addEventListener("click", () => this.nextSlide());
-
-          this.thumbnails.forEach((thumb, index) => {
-            thumb.addEventListener("click", () => this.goToSlide(index));
-          });
-        }
-
-        goToSlide(index) {
-          this.slides[this.currentSlide].classList.remove("active");
-          this.thumbnails[this.currentSlide].classList.remove("active");
-
-          this.currentSlide = index;
-
-          this.slides[this.currentSlide].classList.add("active");
-          this.thumbnails[this.currentSlide].classList.add("active");
-        }
-
-        nextSlide() {
-          const nextIndex = (this.currentSlide + 1) % this.slides.length;
-          this.goToSlide(nextIndex);
-        }
-
-        prevSlide() {
-          const prevIndex =
-            (this.currentSlide - 1 + this.slides.length) % this.slides.length;
-          this.goToSlide(prevIndex);
-        }
-      }
-
-      // Initialize gallery when DOM is loaded
-      document.addEventListener("DOMContentLoaded", () => {
-        new ProductGallery();
-      });
-    </script>
+    <script src="../../../assets/js/catalog/carousel.js"></script>
   </body>
 </html>
