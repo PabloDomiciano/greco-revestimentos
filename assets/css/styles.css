@@ -266,15 +266,15 @@ nav {
 }
 
 .hero-slider .slide-1 {
-  background-image: url("../assets/images/hero/slide1.jpg");
+  background-image: url("../images/hero/slide1.jpg");
 }
 
 .hero-slider .slide-2 {
-  background-image: url("../assets/images/hero/slide7.jpeg");
+  background-image: url("../images/hero/slide7.jpeg");
 }
 
 .hero-slider .slide-3 {
-  background-image: url("../assets/images/hero/slide3.jpg");
+  background-image: url("../images/hero/slide3.jpg");
 }
 
 .hero-content {
@@ -1076,7 +1076,7 @@ footer {
       rgba(10, 35, 66, 0.577) 0%,
       rgba(42, 77, 110, 0.548) 100%
     ),
-    url("../assets/images/hero/slide4.jpg") no-repeat center center/cover;
+    url("../images/hero/slide4.jpg") no-repeat center center/cover;
   color: var(--white);
   text-align: center;
   position: relative;

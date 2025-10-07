@@ -38,11 +38,16 @@
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  color: inherit;
 }
 
 .card::before {
@@ -168,6 +173,16 @@
 /* Animação para os cards */
 .card {
   transition: all 0.3s ease;
+}
+
+/* Estilos para links dos cards */
+.card:link,
+.card:visited,
+.card:focus,
+.card:active {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
 }
 
 .card.hidden {

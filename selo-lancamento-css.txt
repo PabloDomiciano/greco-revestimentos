@@ -1,0 +1,48 @@
+/* CSS para Selo de Lançamento - Salvo para uso futuro */
+
+.selo-lancamento {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #ff6b35, #ff8e53);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+  z-index: 2;
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(255, 107, 53, 0.5);
+  }
+}
+
+/* Responsividade para selos */
+@media (max-width: 768px) {
+  .selo-lancamento {
+    top: 10px;
+    right: 10px;
+    padding: 6px 10px;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .selo-lancamento {
+    top: 8px;
+    right: 8px;
+    padding: 5px 8px;
+    font-size: 0.65rem;
+  }
+}
