@@ -110,6 +110,16 @@
   .grid-produtos {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -123,7 +133,7 @@
   }
 
   .section-title {
-    font-size: 3rem;
+    font-size: 1.6rem;
   }
 
   .card {
