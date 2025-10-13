@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato - Greco Revestimentos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/contact/contact.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <nav>
+          <a href="#" class="logo">
+            <div class="logo-text">
+              <img
+                src="../assets/logo.png"
+                alt="Greco Revestimentos Logo"
+                class="logo-image"
+              />
+            </div>
+          </a>
+          <ul class="nav-links">
+            <li><a href="../index.html">INÍCIO</a></li>
+            <li><a href="about.html">SOBRE</a></li>
+            <li><a href="#gallery">GALERIA</a></li>
+            <li><a href="products.html">PRODUTOS</a></li>
+            <li><a href="suppliers.html">ONDE ENCONTRAR</a></li>
+            <li><a href="contact.html" class="active">CONTATO</a></li>
+          </ul>
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section - Contato -->
+    <section id="home" class="hero-contact">
+      <div class="container">
+        <div class="hero-content">
+          <h1>ENTRE EM CONTATO</h1>
+          <p>
+            Estamos prontos para transformar seus projetos em realidade. Nossa
+            equipe de especialistas está aqui para ajudar você a encontrar a
+            solução perfeita.
+          </p>
+          <a href="#contact-form" class="cta-button">Fale Conosco</a>
+        </div>
+      </div>
+
+      <!-- Redes sociais -->
+      <div class="social-sidebar">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </section>
+
+    <!-- Seção Principal: Informações + Formulário lado a lado -->
+    <section
+      id="contact-form"
+      class="section-padding"
+      style="background: var(--bg-light); padding: 80px 0"
+    >
+      <div class="container">
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+          "
+        >
+          <!-- Lado Esquerdo: Informações de Contato -->
+          <div>
+            <h2
+              style="
+                color: var(--primary-color);
+                font-size: 2.2rem;
+                margin-bottom: 1.5rem;
+                font-weight: 600;
+              "
+            >
+              Informações de Contato
+            </h2>
+            <p
+              style="
+                color: var(--text-light);
+                margin-bottom: 40px;
+                line-height: 1.6;
+              "
+            >
+              Entre em contato conosco através de qualquer um dos canais abaixo.
+              Estamos sempre disponíveis para atender suas necessidades.
+            </p>
+
+            <!-- Cards de Informações -->
+            <div style="display: grid; gap: 25px">
+              <div class="feature-card">
+                <div class="feature-content">
+                  <div class="feature-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="feature-text">
+                    <h3 class="feature-title">Endereço</h3>
+                    <p class="feature-description">
+                      Rua das Pedras, 123<br />
+                      Centro - São Paulo, SP<br />
+                      CEP: 01000-000
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-content">
+                  <div class="feature-icon">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <div class="feature-text">
+                    <h3 class="feature-title">Telefone</h3>
+                    <p class="feature-description">
+                      (11) 3456-7890<br />
+                      (11) 98765-4321
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-content">
+                  <div class="feature-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="feature-text">
+                    <h3 class="feature-title">E-mail</h3>
+                    <p class="feature-description">
+                      contato@grecorevestimentos.com.br<br />
+                      vendas@grecorevestimentos.com.br
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-content">
+                  <div class="feature-icon">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <div class="feature-text">
+                    <h3 class="feature-title">Horário de Funcionamento</h3>
+                    <p class="feature-description">
+                      Segunda a Sexta: 8h às 18h<br />
+                      Sábado: 8h às 12h
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lado Direito: Formulário -->
+          <div>
+            <div
+              style="
+                background: white;
+                padding: 40px;
+                border-radius: 8px;
+                box-shadow: var(--box-shadow);
+                position: sticky;
+                top: 100px;
+              "
+            >
+              <h2
+                style="
+                  color: var(--primary-color);
+                  font-size: 1.8rem;
+                  margin-bottom: 1rem;
+                  font-weight: 600;
+                "
+              >
+                Envie sua Mensagem
+              </h2>
+              <p
+                style="
+                  color: var(--text-light);
+                  margin-bottom: 30px;
+                  line-height: 1.6;
+                "
+              >
+                Preencha o formulário e entraremos em contato em até 24 horas.
+              </p>
+
+              <form class="contact-form" id="contactForm">
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 15px;
+                    margin-bottom: 20px;
+                  "
+                >
+                  <div>
+                    <label
+                      style="
+                        display: block;
+                        margin-bottom: 6px;
+                        font-weight: 500;
+                        color: var(--primary-color);
+                        font-size: 0.9rem;
+                      "
+                      >Nome *</label
+                    >
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      required
+                      style="
+                        width: 100%;
+                        padding: 10px;
+                        border: 2px solid #e9ecef;
+                        border-radius: 4px;
+                        font-size: 0.95rem;
+                      "
+                    />
+                  </div>
+                  <div>
+                    <label
+                      style="
+                        display: block;
+                        margin-bottom: 6px;
+                        font-weight: 500;
+                        color: var(--primary-color);
+                        font-size: 0.9rem;
+                      "
+                      >Sobrenome *</label
+                    >
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      required
+                      style="
+                        width: 100%;
+                        padding: 10px;
+                        border: 2px solid #e9ecef;
+                        border-radius: 4px;
+                        font-size: 0.95rem;
+                      "
+                    />
+                  </div>
+                </div>
+
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 15px;
+                    margin-bottom: 20px;
+                  "
+                >
+                  <div>
+                    <label
+                      style="
+                        display: block;
+                        margin-bottom: 6px;
+                        font-weight: 500;
+                        color: var(--primary-color);
+                        font-size: 0.9rem;
+                      "
+                      >E-mail *</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      style="
+                        width: 100%;
+                        padding: 10px;
+                        border: 2px solid #e9ecef;
+                        border-radius: 4px;
+                        font-size: 0.95rem;
+                      "
+                    />
+                  </div>
+                  <div>
+                    <label
+                      style="
+                        display: block;
+                        margin-bottom: 6px;
+                        font-weight: 500;
+                        color: var(--primary-color);
+                        font-size: 0.9rem;
+                      "
+                      >Telefone</label
+                    >
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      style="
+                        width: 100%;
+                        padding: 10px;
+                        border: 2px solid #e9ecef;
+                        border-radius: 4px;
+                        font-size: 0.95rem;
+                      "
+                    />
+                  </div>
+                </div>
+
+                <div style="margin-bottom: 20px">
+                  <label
+                    style="
+                      display: block;
+                      margin-bottom: 6px;
+                      font-weight: 500;
+                      color: var(--primary-color);
+                      font-size: 0.9rem;
+                    "
+                    >Empresa</label
+                  >
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    style="
+                      width: 100%;
+                      padding: 10px;
+                      border: 2px solid #e9ecef;
+                      border-radius: 4px;
+                      font-size: 0.95rem;
+                    "
+                  />
+                </div>
+
+                <div style="margin-bottom: 20px">
+                  <label
+                    style="
+                      display: block;
+                      margin-bottom: 6px;
+                      font-weight: 500;
+                      color: var(--primary-color);
+                      font-size: 0.9rem;
+                    "
+                    >Assunto *</label
+                  >
+                  <select
+                    id="subject"
+                    name="subject"
+                    required
+                    style="
+                      width: 100%;
+                      padding: 10px;
+                      border: 2px solid #e9ecef;
+                      border-radius: 4px;
+                      font-size: 0.95rem;
+                      background: white;
+                    "
+                  >
+                    <option value="">Selecione um assunto</option>
+                    <option value="orcamento">Solicitação de Orçamento</option>
+                    <option value="produto">Informações sobre Produtos</option>
+                    <option value="representante">Seja um Representante</option>
+                    <option value="suporte">Suporte Técnico</option>
+                    <option value="outros">Outros</option>
+                  </select>
+                </div>
+
+                <div style="margin-bottom: 20px">
+                  <label
+                    style="
+                      display: block;
+                      margin-bottom: 6px;
+                      font-weight: 500;
+                      color: var(--primary-color);
+                      font-size: 0.9rem;
+                    "
+                    >Mensagem *</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    required
+                    placeholder="Descreva seu projeto ou dúvida..."
+                    style="
+                      width: 100%;
+                      padding: 10px;
+                      border: 2px solid #e9ecef;
+                      border-radius: 4px;
+                      font-size: 0.95rem;
+                      resize: vertical;
+                    "
+                  ></textarea>
+                </div>
+
+                <div style="margin-bottom: 15px">
+                  <label
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 8px;
+                      cursor: pointer;
+                      font-size: 0.9rem;
+                    "
+                  >
+                    <input type="checkbox" id="newsletter" name="newsletter" />
+                    Desejo receber novidades por e-mail
+                  </label>
+                </div>
+
+                <div style="margin-bottom: 25px">
+                  <label
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 8px;
+                      cursor: pointer;
+                      font-size: 0.9rem;
+                    "
+                  >
+                    <input
+                      type="checkbox"
+                      id="privacy"
+                      name="privacy"
+                      required
+                    />
+                    Aceito os
+                    <a href="#" style="color: var(--accent-color)"
+                      >termos de privacidade</a
+                    >
+                    *
+                  </label>
+                </div>
+
+                <button
+                  type="submit"
+                  class="cta-button"
+                  style="width: 100%; justify-content: center; padding: 12px"
+                >
+                  <i class="fas fa-paper-plane"></i>
+                  Enviar Mensagem
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section-padding" style="background: white; padding: 60px 0">
+      <div class="container">
+        <h2 class="section-title">Nossa Localização</h2>
+        <p
+          style="
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 50px;
+            color: var(--text-light);
+          "
+        >
+          Visite nosso showroom e conheça pessoalmente nossa linha completa de
+          produtos.
+        </p>
+        <div
+          style="
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+          "
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.813456345192!2d-52.46055102503948!3d-23.067299643626612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9492967dcffcffff%3A0x2544cb165374ec9e!2sGRECO%20REVESTIMENTO%20CIMENTICIOS!5e0!3m2!1spt-BR!2sbr!4v1760375768871!5m2!1spt-BR!2sbr"
+            width="100%"
+            height="400"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section reaproveitando a seção existente -->
+    <section class="cta section-padding">
+      <div class="container">
+        <div class="cta-content">
+          <h2 class="cta-title">Pronto para Começar seu Projeto?</h2>
+          <p class="cta-text">
+            Nossa equipe especializada está pronta para transformar suas ideias
+            em realidade. Entre em contato conosco!
+          </p>
+          <div
+            style="
+              display: flex;
+              gap: 20px;
+              justify-content: center;
+              flex-wrap: wrap;
+            "
+          >
+            <a
+              href="https://wa.me/5511987654321"
+              class="cta-button"
+              style="background: #25d366; border-color: #25d366"
+            >
+              <i class="fab fa-whatsapp"></i>
+              WhatsApp
+            </a>
+            <a href="tel:+5511987654321" class="cta-button">
+              <i class="fas fa-phone"></i>
+              Ligar Agora
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="#" class="logo">
+              <div class="logo-text">
+                <img
+                  src="../assets/logo-footer.png"
+                  alt="Greco Revestimentos Logo"
+                  class="logo-image"
+                />
+              </div>
+            </a>
+            <p>
+              Especialistas em revestimentos premium, transformando espaços com
+              qualidade, inovação e design minimalista.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Links Rápidos</h4>
+            <ul class="footer-links">
+              <li><a href="../index.html">Início</a></li>
+              <li><a href="about.html">Sobre Nós</a></li>
+              <li><a href="products.html">Produtos</a></li>
+              <li><a href="suppliers.html">Onde Encontrar</a></li>
+              <li><a href="contact.html">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Produtos</h4>
+            <ul class="footer-links">
+              <li><a href="#">Revestimento em Fibra</a></li>
+              <li><a href="#">Revestimento Cerâmico</a></li>
+              <li><a href="#">Revestimento Premium</a></li>
+              <li><a href="#">Revestimento Texturizado</a></li>
+              <li><a href="#">Acessórios</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Suporte</h4>
+            <ul class="footer-links">
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Manual de Instalação</a></li>
+              <li><a href="#">Manutenção</a></li>
+              <li><a href="#">Garantia</a></li>
+              <li><a href="#">Política de Privacidade</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 GRECO. Todos os direitos reservados. Revestimentos
+            Premium.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/header.js"></script>
+    <script>
+      // Contact Form Handler
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Show loading state
+          const submitBtn = this.querySelector('button[type="submit"]');
+          const originalText = submitBtn.innerHTML;
+          submitBtn.innerHTML =
+            '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+          submitBtn.disabled = true;
+          submitBtn.style.opacity = "0.7";
+
+          // Simulate form submission
+          setTimeout(() => {
+            alert(
+              "Mensagem enviada com sucesso! Entraremos em contato em breve."
+            );
+            this.reset();
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = "1";
+          }, 2000);
+        });
+
+      // Phone mask
+      const phoneInput = document.getElementById("phone");
+      if (phoneInput) {
+        phoneInput.addEventListener("input", function (e) {
+          let value = e.target.value.replace(/\D/g, "");
+          if (value.length <= 11) {
+            value = value.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+            if (value.length < 14) {
+              value = value.replace(/(\d{2})(\d{4})(\d{4})/, "($1) $2-$3");
+            }
+          }
+          e.target.value = value;
+        });
+      }
+
+      // Smooth scroll para âncora do botão hero
+      document
+        .querySelector(".hero-contact .cta-button")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          document.getElementById("contact-form").scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+    </script>
+  </body>
+</html>

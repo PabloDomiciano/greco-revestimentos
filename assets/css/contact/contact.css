@@ -1,0 +1,238 @@
+/* Contact Page Styles - Complementos ao CSS principal */
+
+/* Hero específico da página de contato - mesma identidade da index */
+.hero-contact {
+  position: relative;
+  height: 115vh;
+  overflow: hidden;
+  background: url('../../../assets/images/hero/contact.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.hero-contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-contact .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-contact .hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--secondary-color);
+  max-width: 700px;
+  padding: 0 20px;
+  margin-left: 50px; /* Mesmo alinhamento da index */
+}
+
+.hero-contact .hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: var(--secondary-color);
+}
+
+.hero-contact .hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  color: var(--secondary-color);
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Social sidebar igual à index */
+.hero-contact .social-sidebar {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 10;
+}
+
+.hero-contact .social-icon {
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.hero-contact .social-icon:hover {
+  background: var(--accent-color);
+  color: var(--primary-color);
+  transform: translateX(-5px);
+}
+
+/* Ajustes específicos para formulário de contato */
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  transition: var(--transition);
+}
+
+.contact-form label {
+  font-size: 0.95rem;
+}
+
+/* Ajuste para checkboxes */
+.contact-form input[type="checkbox"] {
+  width: auto !important;
+  margin-right: 8px;
+}
+
+/* Hover nos cards de informação */
+.feature-card:hover .feature-icon {
+  background: var(--accent-color);
+  color: var(--primary-color);
+}
+
+/* Responsividade hero de contato - tablets */
+@media (max-width: 992px) {
+  .hero-contact .hero-content {
+    margin-left: 20px;
+  }
+
+  .hero-contact .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Layout lado a lado - responsividade */
+@media (max-width: 968px) {
+  /* Grid principal vira vertical em tablets */
+  .container > div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Formulário campos em coluna única no mobile */
+  .contact-form div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+  
+  .contact-form div[style*="flex"] {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  
+  /* Responsividade hero de contato - igual à index */
+  .hero-contact {
+    height: 80vh;
+  }
+
+  .hero-contact .hero-content {
+    max-width: 90%;
+    margin-left: 0;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .hero-contact .hero-content h1 {
+    font-size: 2rem !important;
+  }
+
+  .hero-contact .hero-content p {
+    font-size: 1rem !important;
+  }
+
+  .hero-contact .social-sidebar {
+    position: fixed;
+    right: 10px;
+    top: auto;
+    bottom: 20px;
+    transform: none;
+    flex-direction: row;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+  }
+
+  .hero-contact .social-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .hero-contact .social-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Form container mobile */
+  .contact-form {
+    padding: 25px 20px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-contact .hero-content h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .hero-contact .hero-content p {
+    font-size: 0.95rem !important;
+  }
+
+  .hero-contact .cta-button {
+    padding: 12px 20px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .hero-contact .social-sidebar {
+    bottom: 15px;
+    right: 5px;
+  }
+
+  .hero-contact .social-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-contact .hero-content h1 {
+    font-size: 1.6rem !important;
+  }
+
+  .hero-contact .social-sidebar {
+    position: fixed;
+    bottom: 10px;
+    right: 50%;
+    transform: translateX(50%);
+    flex-direction: row;
+    gap: 8px;
+    padding: 8px;
+  }
+}
