@@ -10,28 +10,29 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="../../../assets/css/styles.css" />
+    <link rel="stylesheet" href="../../../assets/css/products/product-new-layout.css" />
     <link
       rel="stylesheet"
-      href="../../../assets/css/products/products-page.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <style>
+      .hero-banner::before {
+        background-image: url('../../../assets/images/catalog/revestimentos/triangulo/banner1.jpeg');
+      }
+      
+      .technical-section {
+        background-image: url('../../../assets/images/catalog/revestimentos/triangulo/banner2.png');
+      }
+    </style>
   </head>
   <body>
-    <!-- Header -->
     <header>
       <div class="container">
         <nav>
-          <a href="#" class="logo">
+          <a href="../../../index.html" class="logo">
             <div class="logo-text">
-              <img
-                src="../../../assets/logo.png"
-                alt="Greco Revestimentos Logo"
-                class="logo-image"
-              />
+              <img src="../../../assets/logo.png" alt="Greco Revestimentos Logo" class="logo-image" />
             </div>
           </a>
           <ul class="nav-links">
@@ -49,176 +50,103 @@
       </div>
     </header>
 
-    <!-- Breadcrumb -->
-    <section class="breadcrumb">
-      <div class="container">
-        <nav class="breadcrumb-nav">
-          <a href="../../../index.html">Greco</a>
-          <span>/</span>
-          <a href="../../products.html">Produtos</a>
-          <span>/</span>
-          <span class="current">Triângulo</span>
-        </nav>
-      </div>
-    </section>
-
-    <!-- Product Gallery Slider -->
-    <section class="product-gallery">
-      <div class="container">
-        <div class="gallery-slider">
-          <div class="gallery-slides">
-            <div class="gallery-slide active">
-              <img
-                src="../../../assets/images/catalog/revestimentos/triangulo/banner1.jpeg"
-                alt="Triângulo - Vista Frontal"
-              />
-            </div>
-            <div class="gallery-slide">
-              <img
-                src="../../../assets/images/catalog/revestimentos/triangulo/banner2.png"
-                alt="Triângulo - Detalhe"
-              />
-            </div>
-            <div class="gallery-slide">
-              <img
-                src="../../../assets/images/catalog/revestimentos/triangulo/banner3.jpeg"
-                alt="Triângulo - Aplicação"
-              />
-            </div>
-          </div>
-          <div class="gallery-arrows">
-            <button class="gallery-arrow gallery-prev">‹</button>
-            <button class="gallery-arrow gallery-next">›</button>
-          </div>
-          <div class="gallery-thumbnails">
-            <div class="thumbnail active" data-slide="0">
-              <img
-                src="../../../assets/images/catalog/revestimentos/triangulo/banner1.jpeg"
-                alt="Thumbnail 1"
-              />
-            </div>
-            <div class="thumbnail" data-slide="1">
-              <img
-                src="../../../assets/images/catalog/revestimentos/triangulo/banner2.png"
-                alt="Thumbnail 2"
-              />
-            </div>
-            <div class="thumbnail" data-slide="2">
-              <img
-                src="../../../assets/images/catalog/revestimentos/triangulo/banner3.jpeg"
-                alt="Thumbnail 3"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Product Details -->
-    <section class="product-details">
-      <div class="container">
-        <div class="product-info">
-          <div class="product-header">
-            <h1 class="product-title">Triângulo</h1>
-            <p class="product-category">Revestimento de Parede</p>
-          </div>
-
-          <div class="product-content">
-            <div class="product-description">
-              <h2>Descrição do Produto</h2>
-              <p>
-                O Triângulo é um revestimento que combina funcionalidade e design
+    <section class="hero-banner">
+      <img src="../../../assets/images/catalog/revestimentos/triangulo/capa.jpeg" alt="Triângulo 3D" class="product-3d" />
+      <div class="hero-content">
+        <p class="line-subtitle">REVESTIMENTO DE PAREDE</p>
+        <h1 class="line-title">TRIÂNGULO</h1>
+        <p class="line-description">O Triângulo é um revestimento que combina funcionalidade e design
                 contemporâneo. Com formato triangular único, oferece
-                versatilidade para criar composições modernas e elegantes.
-              </p>
-            </div>
+                versatilidade para criar composições modernas e elegantes.</p>
+      </div>
+    </section>
 
-            <div class="technical-specs">
-              <h2>Especificações Técnicas</h2>
-              <div class="specs-grid">
-                <div class="spec-item">
-                  <span class="spec-label">Tipo:</span>
-                  <span class="spec-value">Revestimento de Parede</span>
-                </div>
-                <div class="spec-item">
-                  <span class="spec-label">Acabamento:</span>
-                  <span class="spec-value">Geométrico</span>
-                </div>
-              </div>
-            </div>
+    <section class="technical-section" id="technical">
+      <div class="container">
+        <h2>DETALHES TÉCNICOS</h2>
+        <p class="section-subtitle">Especificações completas e informações detalhadas do produto</p>
+        <div class="tech-tabs-wrapper">
+          <div class="tech-tabs">
+            <button class="tech-tab active" data-tab="medidas">Opções de Medidas</button>
+            <button class="tech-tab" data-tab="acabamento">Acabamento e Tratamento</button>
+            <button class="tech-tab" data-tab="downloads">Downloads</button>
+          </div>
 
-            <div class="color-options">
-              <h2>Cores Disponíveis</h2>
-              <div class="colors-grid">
-                <div class="color-item">
-                  <div class="color-swatch color-branco"></div>
-                  <span class="color-name">Branco</span>
-                </div>
-                <div class="color-item">
-                  <div class="color-swatch color-areia"></div>
-                  <span class="color-name">Areia</span>
-                </div>
-                <div class="color-item">
-                  <div class="color-swatch color-fendi"></div>
-                  <span class="color-name">Fendi</span>
-                </div>
-                <div class="color-item">
-                  <div class="color-swatch color-cinza"></div>
-                  <span class="color-name">Cinza</span>
-                </div>
-                <div class="color-item">
-                  <div class="color-swatch color-grafite"></div>
-                  <span class="color-name">Grafite</span>
-                </div>
-              </div>
-            </div>
-            <div class="available-sizes">
-              <div class="spec-item-disponibility">
-                <span class="spec-label">Disponível em:</span>
-                <div class="border-types-inline">
-                  <div class="standard-sizes">
-                    <span class="size-badge">30×50cm</span>
-                  </div>
-                </div>
-              </div>
-              <div class="spec-item-disponibility-logo">
-                <img
-                  src="../../../assets/logo.png"
-                  alt="Greco"
-                  class="logo-completate"
-                />
-              </div>
-            </div>
+          <div class="tech-content active" id="medidas">
+            <table class="panel-table">
+              <thead><tr><th>Tipo</th><th>Acabamento</th></tr></thead>
+              <tbody><tr><td>Revestimento de Parede</td><td>Geométrico</td></tr></tbody>
+            </table>
+          </div>
 
-            <div class="product-actions">
-              <a href="#" class="cta-button">Solicitar Orçamento</a>
-              <a href="../../products.html" class="secondary-button"
-                >Ver Outros Produtos</a
-              >
-            </div>
+          <div class="tech-content" id="acabamento">
+            <p>Acabamento de alta qualidade com tratamento superficial. Ideal para aplicações que exigem durabilidade e beleza. O produto oferece excelente resistência e manutenção facilitada.</p>
+          </div>
+
+          <div class="tech-content" id="downloads">
+            <a href="#" class="download-btn"><i class="fas fa-file-pdf"></i> Baixar Ficha Técnica</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
+    <section class="cases-section">
+      <div class="container">
+        <h2>CASES</h2>
+        <p class="section-subtitle">Veja como nossos produtos transformam espaços reais em ambientes extraordinários</p>
+        <div class="cases-grid">
+          <div class="case-card">
+            <img src="../../../assets/images/catalog/revestimentos/triangulo/banner1.jpeg" alt="Case 1" class="case-image" />
+            <div class="case-overlay">
+              <div class="case-title">Triângulo em Ambiente Moderno</div>
+              <div class="case-subtitle">por Studio Design</div>
+            </div>
+            <a href="#" class="case-btn">Ver Mais</a>
+          </div>
+          <div class="case-card">
+            <img src="../../../assets/images/catalog/revestimentos/triangulo/banner2.png" alt="Case 2" class="case-image" />
+            <div class="case-overlay">
+              <div class="case-title">Elegância e Sofisticação</div>
+              <div class="case-subtitle">por Arquitetos Associados</div>
+            </div>
+            <a href="#" class="case-btn">Ver Mais</a>
+          </div>
+        </div>
+        <div class="more-cases">
+          <a href="#">MAIS CASES <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-footer">
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-book"></i></div>
+            <h3>Informações Técnicas</h3>
+            <p>Guias completos sobre armazenamento, transporte e manuseio adequado dos produtos. Garantia de qualidade e durabilidade excepcional.</p>
+            <a href="#technical" class="info-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h3>Onde Encontrar</h3>
+            <p>Rede de distribuição em todo o Brasil. Encontre facilmente nossos produtos em lojas especializadas próximas a você.</p>
+            <a href="../../suppliers.html" class="info-link">Ver Locais <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer>
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col">
-            <a href="#" class="logo">
+            <a href="../../../index.html" class="logo">
               <div class="logo-text">
-                <img
-                  src="../../../assets/logo-footer.png"
-                  alt="Greco Revestimentos Logo"
-                  class="logo-image"
-                />
+                <img src="../../../assets/logo-footer.png" alt="Greco Revestimentos Logo" class="logo-image" />
               </div>
             </a>
-            <p>
-              Especialistas em revestimentos premium, transformando espaços com
-              qualidade, inovação e design minimalista.
-            </p>
+            <p>Especialistas em revestimentos premium, transformando espaços com qualidade, inovação e design minimalista.</p>
             <div class="social-links">
               <a href="#"><i class="fab fa-facebook-f"></i></a>
               <a href="#"><i class="fab fa-instagram"></i></a>
@@ -228,10 +156,10 @@
           <div class="footer-col">
             <h4>Links Rápidos</h4>
             <ul class="footer-links">
-              <li><a href="#home">Início</a></li>
-              <li><a href="#about">Sobre Nós</a></li>
-              <li><a href="#products">Produtos</a></li>
-              <li><a href="#services">Galeria</a></li>
+              <li><a href="../../../index.html">Início</a></li>
+              <li><a href="../../about.html">Sobre Nós</a></li>
+              <li><a href="../../products.html">Produtos</a></li>
+              <li><a href="#gallery">Galeria</a></li>
               <li><a href="../../contact.html">Contato</a></li>
             </ul>
           </div>
@@ -257,16 +185,52 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>
-            &copy; 2025 GRECO. Todos os direitos reservados. Revestimentos
-            Premium.
-          </p>
+          <p>&copy; 2025 GRECO. Todos os direitos reservados. Revestimentos Premium.</p>
         </div>
       </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="../../../assets/js/header.js"></script>
-    <script src="../../../assets/js/catalog/carousel.js"></script>
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            const headerOffset = 160;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+          }
+        });
+      });
+
+      document.querySelectorAll('.tech-tab').forEach(tab => {
+        tab.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-tab');
+          document.querySelectorAll('.tech-tab').forEach(t => t.classList.remove('active'));
+          document.querySelectorAll('.tech-content').forEach(c => c.classList.remove('active'));
+          this.classList.add('active');
+          document.getElementById(targetId).classList.add('active');
+        });
+      });
+
+      const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.case-card, .info-item').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all 0.6s ease';
+        observer.observe(el);
+      });
+    </script>
   </body>
 </html>
