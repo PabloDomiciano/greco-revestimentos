@@ -2,8 +2,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   const heroSlides = document.querySelectorAll(".hero-slider .slide");
   const prevArrow = document.querySelector(".slider-arrows .prev");
+  const nextArrow = document.querySelector(".slider-arrows .next");
 
-  if (heroSlides.length === 0 || !prevArrow) return;
+  if (heroSlides.length === 0 || !prevArrow || !nextArrow) return;
 
   let currentSlide = 0;
   let heroInterval;
@@ -44,9 +45,14 @@ document.addEventListener("DOMContentLoaded", function () {
     heroInterval = setInterval(nextSlide, 5000);
   }
 
-  // Event listeners
+  // Event listeners para ambas as setas
   prevArrow.addEventListener("click", function () {
     prevSlide();
+    startAutoplay();
+  });
+
+  nextArrow.addEventListener("click", function () {
+    nextSlide();
     startAutoplay();
   });
 
