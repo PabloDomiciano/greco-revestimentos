@@ -1139,10 +1139,10 @@ footer {
 .cta {
   background: linear-gradient(
       135deg,
-      rgba(10, 35, 66, 0.577) 0%,
-      rgba(42, 77, 110, 0.548) 100%
+      rgba(10, 35, 66, 0.74) 0%,
+      rgba(42, 77, 110, 0.782) 100%
     ),
-    url("../images/hero/slide4.jpg") no-repeat center center/cover;
+    url("../images/hero/banner8.png") no-repeat center center/cover;
   color: var(--white);
   text-align: center;
   position: relative;

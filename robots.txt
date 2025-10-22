@@ -1,0 +1,14 @@
+# robots.txt para Greco Revestimentos
+User-agent: *
+Allow: /
+
+# Permitir acesso a todas as páginas
+Allow: /pages/
+Allow: /assets/
+
+# Disallow sensitive files
+Disallow: /assets/js/
+Disallow: /*.txt$
+
+# Sitemap
+Sitemap: https://greco-revestimentos.vercel.app/sitemap.xml
