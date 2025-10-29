@@ -65,31 +65,214 @@
     <section class="technical-section" id="technical">
       <div class="container">
         <h2>DETALHES TÉCNICOS</h2>
-        <p class="section-subtitle">Especificações completas e informações detalhadas do produto</p>
+        <p class="section-subtitle">
+          Especificações completas e informações detalhadas do produto
+        </p>
         <div class="tech-tabs-wrapper">
           <div class="tech-tabs">
-            <button class="tech-tab active" data-tab="medidas">Opções de Medidas</button>
-            <button class="tech-tab" data-tab="acabamento">Acabamento e Tratamento</button>
+            <button class="tech-tab active" data-tab="medidas">
+              Opções de Medidas
+            </button>
+            <button class="tech-tab" data-tab="acabamento">
+              Acabamento e Tratamento
+            </button>
             <button class="tech-tab" data-tab="downloads">Downloads</button>
           </div>
 
           <div class="tech-content active" id="medidas">
             <table class="panel-table">
-              <thead><tr><th>Tipo</th><th>Aplicação</th></tr></thead>
-              <tbody><tr><td>Borda de Piscina</td><td>Piscinas de fibra e alvenaria</td></tr></tbody>
+              <thead>
+                <tr>
+                  <th>Tipo</th>
+                  <th>Aplicação</th>
+                  <th>Espessura</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Retas</td>
+                  <td>Piscinas de alvenaria e fibra</td>
+                  <td>2cm</td>
+                </tr>
+              </tbody>
             </table>
+
+            <table class="panel-table" style="margin-top: 20px">
+              <thead>
+                <tr>
+                  <th colspan="2">Medidas Disponíveis</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="measure-row">
+                    <button class="measure-header">
+                      <span class="measure-title">50 x 20 cm</span>
+                      <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="measure-content">
+                      <span class="measure-weight"
+                        >Peso: <strong>5,7</strong></span
+                      >
+                    </div>
+                  </td>
+                  <td class="measure-row">
+                    <button class="measure-header">
+                      <span class="measure-title">50 x 25 cm</span>
+                      <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="measure-content">
+                      <span class="measure-weight"
+                        >Peso: <strong>7,2 kg</strong></span
+                      >
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="measure-row">
+                    <button class="measure-header">
+                      <span class="measure-title">50 x 30 cm</span>
+                      <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="measure-content">
+                      <span class="measure-weight"
+                        >Peso: <strong>Consultar</strong></span
+                      >
+                    </div>
+                  </td>
+                  <td class="measure-row">
+                    <button class="measure-header">
+                      <span class="measure-title">50 x 35 cm</span>
+                      <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="measure-content">
+                      <span class="measure-weight"
+                        >Peso: <strong>9,6</strong></span
+                      >
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="measure-row">
+                    <button class="measure-header">
+                      <span class="measure-title">50 x 40 cm</span>
+                      <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="measure-content">
+                      <span class="measure-weight"
+                        >Peso: <strong>Consultar</strong></span
+                      >
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <style>
+              .measure-row {
+                width: 50%;
+                padding: 0 !important;
+                border: none !important;
+                vertical-align: top;
+              }
+
+              .measure-header {
+                width: 100%;
+                padding: 15px 20px;
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                color: #fff;
+                font-size: 1rem;
+                font-weight: 500;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                transition: all 0.3s ease;
+              }
+
+              .measure-header:hover {
+                background: rgba(255, 255, 255, 0.05);
+              }
+
+              .measure-header i {
+                transition: transform 0.3s ease;
+                color: #d4882c;
+                font-size: 0.9rem;
+              }
+
+              .measure-row.active .measure-header i {
+                transform: rotate(180deg);
+              }
+
+              .measure-content {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease, padding 0.3s ease;
+                padding: 0 20px;
+                background: rgba(255, 255, 255, 0.03);
+              }
+
+              .measure-row.active .measure-content {
+                max-height: 100px;
+                padding: 15px 20px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+              }
+
+              .measure-weight {
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 0.95rem;
+                display: block;
+              }
+
+              .measure-weight strong {
+                color: #d4882c;
+                margin-left: 5px;
+              }
+
+              @media (max-width: 768px) {
+                .measure-row {
+                  width: 100%;
+                  display: block;
+                }
+
+                .panel-table tbody tr {
+                  display: flex;
+                  flex-direction: column;
+                }
+
+                .measure-header {
+                  padding: 12px 15px;
+                  font-size: 0.95rem;
+                }
+
+                .measure-row.active .measure-content {
+                  padding: 12px 15px;
+                }
+              }
+            </style>
           </div>
 
           <div class="tech-content" id="acabamento">
-            <p>Acabamento de alta qualidade com tratamento superficial. Ideal para aplicações que exigem durabilidade e beleza. O produto oferece excelente resistência e manutenção facilitada.</p>
+            <p>
+              Acabamento de alta qualidade com tratamento superficial. Ideal
+              para aplicações que exigem durabilidade e beleza. O produto
+              oferece excelente resistência e manutenção facilitada.
+            </p>
           </div>
 
           <div class="tech-content" id="downloads">
-            <a href="#" class="download-btn"><i class="fas fa-file-pdf"></i> Baixar Ficha Técnica</a>
+            <a href="#" class="download-btn"
+              ><i class="fas fa-file-pdf"></i> Baixar Ficha Técnica</a
+            >
           </div>
         </div>
       </div>
     </section>
+
 
     <section class="cases-section">
       <div class="container">
