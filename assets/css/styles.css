@@ -617,6 +617,18 @@ nav {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 }
 
+/* Touch devices - melhor visualização */
+@media (hover: none) and (pointer: coarse) {
+  .product-card:active {
+    transform: scale(0.98);
+  }
+  
+  .product-card:active .product-name {
+    background: linear-gradient(to top, var(--accent-color), rgba(255, 165, 0, 0.9));
+    color: var(--primary-color);
+  }
+}
+
 .product-image {
   width: 100%;
   height: 100%;
@@ -631,18 +643,28 @@ nav {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: linear-gradient(to top, rgba(8, 21, 53, 0.95), rgba(8, 21, 53, 0.85));
   color: white;
-  padding: 15px;
+  padding: 18px 15px;
   text-align: center;
   transform: translateY(100%);
-  transition: transform 0.3s ease;
-  font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 700;
   font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-top: 3px solid var(--accent-color);
+  backdrop-filter: blur(5px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product-card:hover .product-name {
-  transform: translateY(0);
+  background: linear-gradient(to top, var(--accent-color), rgba(255, 165, 0, 0.9));
+  color: var(--primary-color);
+  border-top-color: var(--primary-color);
+  transform: scale(1.02);
 }
 
 /* Setas de navegação */
@@ -722,6 +744,14 @@ nav {
   .arrow-next {
     right: 10px;
   }
+
+  .product-name {
+    font-size: 0.95rem;
+    padding: 14px 12px;
+    letter-spacing: 0.8px;
+    white-space: normal;
+    line-height: 1.25;
+  }
 }
 
 @media (max-width: 576px) {
@@ -751,6 +781,37 @@ nav {
   .products-carousel::before,
   .products-carousel::after {
     width: 80px;
+  }
+
+  /* Product name sempre visível em mobile */
+  .product-name {
+    transform: translateY(100%);
+    font-size: 1rem;
+    padding: 16px 15px;
+    letter-spacing: 1px;
+    position: relative;
+    white-space: normal;
+    line-height: 1.3;
+  }
+
+  .product-card:hover .product-name {
+    background: linear-gradient(to top, var(--accent-color), rgba(255, 165, 0, 0.9));
+    color: var(--primary-color);
+    border-top-color: var(--primary-color);
+  }
+}
+
+@media (max-width: 400px) {
+  .product-card {
+    height: 480px;
+  }
+
+  .product-name {
+    font-size: 0.9rem;
+    padding: 14px 12px;
+    letter-spacing: 0.5px;
+    white-space: normal;
+    line-height: 1.2;
   }
 }
 
