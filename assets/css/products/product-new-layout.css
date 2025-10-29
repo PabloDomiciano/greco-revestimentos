@@ -23,8 +23,8 @@ body {
 ======================================== */
 .hero-banner {
   position: relative;
-  height: 85vh;
-  min-height: 650px;
+  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(135deg, var(--primary-color) 0%, #0a1d4a 50%, #0c2558 100%);
   display: flex;
   align-items: center;
@@ -254,6 +254,152 @@ body {
 .panel-table td { 
   font-weight: 600;
   font-size: 1.1rem;
+}
+
+/* ========================================
+   TABELA DE MEDIDAS - Accordion Style
+======================================== */
+.measure-row {
+  width: 50%;
+  padding: 0 !important;
+  border: none !important;
+  vertical-align: top;
+}
+
+.measure-header {
+  width: 100%;
+  padding: 15px 20px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.measure-header:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.measure-header i {
+  transition: transform 0.3s ease;
+  color: #d4882c;
+  font-size: 0.9rem;
+}
+
+.measure-row.active .measure-header i {
+  transform: rotate(180deg);
+}
+
+.measure-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 20px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.measure-row.active .measure-content {
+  max-height: 100px;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.measure-weight {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  display: block;
+}
+
+.measure-weight strong {
+  color: #d4882c;
+  margin-left: 5px;
+}
+
+/* Responsividade específica para tabelas técnicas */
+@media (max-width: 768px) {
+  /* Esconde apenas os cabeçalhos normais, não os com colspan */
+  .panel-table thead tr th:not([colspan]) {
+    display: none;
+  }
+  
+  /* Cabeçalho de seção (Medidas Disponíveis) visível em mobile */
+  .panel-table thead tr th[colspan] {
+    display: block !important;
+    background: rgba(212, 136, 44, 0.15);
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid var(--accent-color);
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+  }
+  
+  .panel-table,
+  .panel-table tbody,
+  .panel-table tr,
+  .panel-table td {
+    display: block;
+    width: 100%;
+  }
+  
+  .panel-table tr {
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .panel-table td {
+    text-align: left;
+    padding: 12px 15px;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.95rem;
+  }
+  
+  .panel-table td:last-child {
+    border-bottom: none;
+  }
+  
+  .panel-table td:before {
+    content: attr(data-label);
+    display: block;
+    font-weight: 600;
+    color: var(--accent-color);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+  }
+  
+  /* Estilização especial para as células da tabela de medidas */
+  .panel-table .measure-row {
+    width: 100% !important;
+    display: block;
+  }
+  
+  .panel-table tbody tr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .measure-header {
+    padding: 12px 15px;
+    font-size: 0.95rem;
+  }
+
+  .measure-row.active .measure-content {
+    padding: 12px 15px;
+  }
 }
 
 .tech-content p {
@@ -603,11 +749,12 @@ body {
   }
 
   .hero-banner {
-    height: auto;
-    min-height: 500px;
+    height: 100vh;
+    min-height: 100vh;
     flex-direction: column;
-    justify-content: flex-start;
-    padding: 80px 0 30px;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 0 40px;
   }
 
   .hero-banner::after {
@@ -616,11 +763,11 @@ body {
 
   .hero-product-content {
     position: relative;
-    top: 0;
+    bottom: 0;
     right: 0;
     padding: 25px 20px;
     max-width: 100%;
-    margin: 0 20px 30px;
+    margin: 0 20px 20px;
   }
 
   .hero-product-content .line-title {
@@ -641,17 +788,17 @@ body {
     position: relative;
     width: 260px;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    transform: none;
     margin-bottom: 20px;
   }
 
   @keyframes float {
     0%, 100% {
-      transform: translateX(-50%) translateY(0) rotate(-3deg);
+      transform: translateY(0) rotate(-3deg);
     }
     50% {
-      transform: translateX(-50%) translateY(-12px) rotate(-3deg);
+      transform: translateY(-12px) rotate(-3deg);
     }
   }
 
@@ -701,6 +848,10 @@ body {
 
   .tech-content {
     padding: 25px 18px;
+  }
+
+  .panel-table {
+    margin-top: 0;
   }
 
   .panel-table th {
@@ -792,12 +943,12 @@ body {
 /* Mobile (576px - 480px) */
 @media (max-width: 576px) {
   .hero-banner {
-    min-height: 450px;
-    padding: 60px 0 20px;
+    min-height: 100vh;
+    padding: 15px 0 30px;
   }
 
   .hero-product-content {
-    margin: 0 15px 25px;
+    margin: 0 15px 15px;
     padding: 20px 18px;
   }
 
@@ -817,6 +968,7 @@ body {
 
   .product-3d {
     width: 200px;
+    margin-bottom: 15px;
   }
 
   .technical-section,
@@ -840,7 +992,14 @@ body {
   .panel-table th,
   .panel-table td {
     padding: 8px 10px;
-    font-size: 0.85rem;
+  }
+  
+  .panel-table td {
+    font-size: 0.9rem;
+  }
+  
+  .panel-table td:before {
+    font-size: 0.7rem;
   }
 
   .download-btn {
@@ -894,12 +1053,12 @@ body {
   }
 
   .hero-banner {
-    min-height: 400px;
-    padding: 50px 0 15px;
+    min-height: 100vh;
+    padding: 10px 0 25px;
   }
 
   .hero-product-content {
-    margin: 0 12px 20px;
+    margin: 0 12px 12px;
     padding: 18px 15px;
   }
 
@@ -917,6 +1076,7 @@ body {
 
   .product-3d {
     width: 180px;
+    margin-bottom: 12px;
   }
 
   .technical-section h2,

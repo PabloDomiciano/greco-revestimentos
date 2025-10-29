@@ -103,9 +103,9 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>Retas e Curvas</td>
-                  <td>Piscinas de alvenaria</td>
-                  <td>3cm</td>
+                  <td data-label="Tipo">Retas e Curvas</td>
+                  <td data-label="Aplicação">Piscinas de alvenaria</td>
+                  <td data-label="Espessura">3cm</td>
                 </tr>
               </tbody>
             </table>
@@ -182,91 +182,6 @@
                 </tr>
               </tbody>
             </table>
-
-            <style>
-              .measure-row {
-                width: 50%;
-                padding: 0 !important;
-                border: none !important;
-                vertical-align: top;
-              }
-
-              .measure-header {
-                width: 100%;
-                padding: 15px 20px;
-                background: transparent;
-                border: none;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                color: #fff;
-                font-size: 1rem;
-                font-weight: 500;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                cursor: pointer;
-                transition: all 0.3s ease;
-              }
-
-              .measure-header:hover {
-                background: rgba(255, 255, 255, 0.05);
-              }
-
-              .measure-header i {
-                transition: transform 0.3s ease;
-                color: #d4882c;
-                font-size: 0.9rem;
-              }
-
-              .measure-row.active .measure-header i {
-                transform: rotate(180deg);
-              }
-
-              .measure-content {
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease, padding 0.3s ease;
-                padding: 0 20px;
-                background: rgba(255, 255, 255, 0.03);
-              }
-
-              .measure-row.active .measure-content {
-                max-height: 100px;
-                padding: 15px 20px;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-              }
-
-              .measure-weight {
-                color: rgba(255, 255, 255, 0.8);
-                font-size: 0.95rem;
-                display: block;
-              }
-
-              .measure-weight strong {
-                color: #d4882c;
-                margin-left: 5px;
-              }
-
-              @media (max-width: 768px) {
-                .measure-row {
-                  width: 100%;
-                  display: block;
-                }
-
-                .panel-table tbody tr {
-                  display: flex;
-                  flex-direction: column;
-                }
-
-                .measure-header {
-                  padding: 12px 15px;
-                  font-size: 0.95rem;
-                }
-
-                .measure-row.active .measure-content {
-                  padding: 12px 15px;
-                }
-              }
-            </style>
           </div>
 
           <div class="tech-content" id="acabamento">
