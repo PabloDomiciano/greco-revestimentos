@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>Galeria de Projetos - Greco Revestimentos | Inspirações e Realizações</title>
+    <meta name="description" content="Confira nossa galeria de projetos executados com revestimentos Greco. Inspire-se com ambientes únicos, elegantes e sofisticados." />
+    <meta name="keywords" content="galeria greco, projetos revestimentos, inspiração decoração, greco projetos, ambientes decorados, revestimentos aplicados" />
+    <meta name="author" content="Greco Revestimentos" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://greco-revestimentos.vercel.app/pages/gallery.html" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://greco-revestimentos.vercel.app/pages/gallery.html" />
+    <meta property="og:title" content="Galeria de Projetos - Greco Revestimentos" />
+    <meta property="og:description" content="Inspire-se com nossa galeria de projetos executados com revestimentos premium." />
+    <meta property="og:image" content="https://greco-revestimentos.vercel.app/assets/images/hero/banner1.png" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://greco-revestimentos.vercel.app/pages/gallery.html" />
+    <meta property="twitter:title" content="Galeria de Projetos - Greco Revestimentos" />
+    <meta property="twitter:description" content="Inspire-se com nossa galeria de projetos." />
+    <meta property="twitter:image" content="https://greco-revestimentos.vercel.app/assets/images/hero/banner1.png" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/gallery/gallery.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <nav>
+          <a href="../index.html" class="logo">
+            <div class="logo-text">
+              <img
+                src="../assets/logo.png"
+                alt="Greco Revestimentos Logo"
+                class="logo-image"
+              />
+            </div>
+          </a>
+          <ul class="nav-links">
+            <li><a href="../index.html">INÍCIO</a></li>
+            <li><a href="./about.html">SOBRE</a></li>
+            <li><a href="./gallery.html" class="active">GALERIA</a></li>
+            <li><a href="./products.html">PRODUTOS</a></li>
+            <li><a href="./suppliers.html">ONDE ENCONTRAR</a></li>
+            <li><a href="./contact.html">CONTATO</a></li>
+          </ul>
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section - Gallery -->
+    <section id="home" class="hero-gallery">
+      <div class="hero-gallery-slider">
+        <div class="gallery-slide">
+          <div class="container">
+            <div class="hero-gallery-content">
+              <h1>Galeria de Projetos</h1>
+              <p>
+                Inspire-se com ambientes únicos e sofisticados criados com nossos
+                revestimentos premium.
+              </p>
+              <a href="#gallery-grid" class="cta-button">Explorar Projetos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Redes sociais -->
+      <div class="gallery-social-sidebar">
+        <a href="#" class="gallery-social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="gallery-social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="gallery-social-icon"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="gallery-social-icon"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </section>
+
+    <!-- Filtros de Categoria -->
+    <section class="gallery-filters section-padding">
+      <div class="container">
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">
+            <i class="fas fa-th"></i> Todos
+          </button>
+          <button class="filter-btn" data-filter="residential">
+            <i class="fas fa-home"></i> Residencial
+          </button>
+          <button class="filter-btn" data-filter="commercial">
+            <i class="fas fa-building"></i> Comercial
+          </button>
+          <button class="filter-btn" data-filter="pool">
+            <i class="fas fa-swimming-pool"></i> Piscinas
+          </button>
+          <button class="filter-btn" data-filter="facade">
+            <i class="fas fa-city"></i> Fachadas
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grid de Galeria -->
+    <section id="gallery-grid" class="gallery-section">
+      <div class="container">
+        <div class="gallery-grid">
+          
+          <!-- Projeto 1 -->
+          <div class="gallery-item" data-category="residential">
+            <div class="gallery-image">
+              <img src="../assets/images/hero/banner6.jpeg" alt="Projeto Residencial 1" />
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Casa Moderna</h3>
+                  <p>Revestimento Etrusco</p>
+                  <button class="view-btn" onclick="openModal(0)">
+                    <i class="fas fa-search-plus"></i> Ver Detalhes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeto 2 -->
+          <div class="gallery-item" data-category="commercial">
+            <div class="gallery-image">
+              <img src="../assets/images/hero/banner9.jpeg" alt="Projeto Comercial 1" />
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Espaço Corporativo</h3>
+                  <p>Revestimento Travertino</p>
+                  <button class="view-btn" onclick="openModal(1)">
+                    <i class="fas fa-search-plus"></i> Ver Detalhes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeto 3 -->
+          <div class="gallery-item" data-category="pool">
+            <div class="gallery-image">
+              <img src="../assets/images/hero/banner10.jpeg" alt="Projeto Piscina 1" />
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Área de Lazer Premium</h3>
+                  <p>Borda Grécia</p>
+                  <button class="view-btn" onclick="openModal(2)">
+                    <i class="fas fa-search-plus"></i> Ver Detalhes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeto 4 -->
+          <div class="gallery-item" data-category="residential">
+            <div class="gallery-image">
+              <img src="../assets/images/about/fachada-maringa.jpeg" alt="Projeto Residencial 2" />
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Residência Elegante</h3>
+                  <p>Revestimento Arezo</p>
+                  <button class="view-btn" onclick="openModal(3)">
+                    <i class="fas fa-search-plus"></i> Ver Detalhes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeto 5 -->
+          <div class="gallery-item" data-category="facade">
+            <div class="gallery-image">
+              <img src="../assets/images/hero/banner6.jpeg" alt="Fachada 1" />
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Fachada Contemporânea</h3>
+                  <p>Revestimento Cobogó</p>
+                  <button class="view-btn" onclick="openModal(4)">
+                    <i class="fas fa-search-plus"></i> Ver Detalhes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeto 6 -->
+          <div class="gallery-item" data-category="commercial">
+            <div class="gallery-image">
+              <img src="../assets/images/hero/banner9.jpeg" alt="Projeto Comercial 2" />
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Loja Conceito</h3>
+                  <p>Revestimento Ripado</p>
+                  <button class="view-btn" onclick="openModal(5)">
+                    <i class="fas fa-search-plus"></i> Ver Detalhes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Botão Carregar Mais -->
+        <div class="load-more-container">
+          <button class="cta-button load-more-btn">
+            <i class="fas fa-plus-circle"></i> Carregar Mais Projetos
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal de Visualização -->
+    <div id="galleryModal" class="modal">
+      <span class="close-modal">&times;</span>
+      <div class="modal-content">
+        <button class="modal-nav prev-modal">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <img class="modal-image" id="modalImage" src="" alt="" />
+        <div class="modal-caption">
+          <h3 id="modalTitle"></h3>
+          <p id="modalDescription"></p>
+        </div>
+        <button class="modal-nav next-modal">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta section-padding">
+      <div class="container">
+        <div class="cta-content">
+          <h2 class="cta-title">Quer Seu Projeto Aqui?</h2>
+          <p class="cta-text">
+            Entre em contato conosco e transforme seu espaço com nossos
+            revestimentos premium de alta qualidade.
+          </p>
+          <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="contact.html" class="cta-button">
+              <i class="fas fa-envelope"></i> Solicitar Orçamento
+            </a>
+            <a href="products.html" class="cta-button" style="background: var(--primary-color); border-color: var(--primary-color);">
+              <i class="fas fa-th"></i> Ver Produtos
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="#" class="logo">
+              <div class="logo-text">
+                <img
+                  src="../assets/logo-footer.png"
+                  alt="Greco Revestimentos Logo"
+                  class="logo-image"
+                />
+              </div>
+            </a>
+            <p>
+              Especialistas em revestimentos premium, transformando espaços com
+              qualidade, inovação e design minimalista.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Links Rápidos</h4>
+            <ul class="footer-links">
+              <li><a href="../index.html">Início</a></li>
+              <li><a href="about.html">Sobre Nós</a></li>
+              <li><a href="products.html">Produtos</a></li>
+              <li><a href="gallery.html">Galeria</a></li>
+              <li><a href="contact.html">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Produtos</h4>
+            <ul class="footer-links">
+              <li><a href="#">Revestimento em Fibra</a></li>
+              <li><a href="#">Revestimento Cerâmico</a></li>
+              <li><a href="#">Revestimento Premium</a></li>
+              <li><a href="#">Revestimento Texturizado</a></li>
+              <li><a href="#">Acessórios</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Suporte</h4>
+            <ul class="footer-links">
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Manual de Instalação</a></li>
+              <li><a href="#">Manutenção</a></li>
+              <li><a href="#">Garantia</a></li>
+              <li><a href="#">Política de Privacidade</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 GRECO. Todos os direitos reservados. Revestimentos
+            Premium.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/gallery.js"></script>
+  </body>
+</html>
