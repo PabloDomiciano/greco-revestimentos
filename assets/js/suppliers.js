@@ -1,13 +1,23 @@
 // Funcionalidade para os filtros melhorados
 document.addEventListener("DOMContentLoaded", function () {
-  const filterButtons = document.querySelectorAll(".filter-btn");
-  const searchInput = document.getElementById("searchInput");
+  const cityFilter = document.getElementById("cityFilter");
+  const supplierFilter = document.getElementById("supplierFilter");
   const cards = document.querySelectorAll(".card");
   const resultsCounter = document.getElementById("resultsCounter");
   const noResults = document.getElementById("noResults");
 
-  let activeFilter = "todos";
-  let searchTerm = "";
+  let activeCityFilter = "todos";
+  let activeSupplierFilter = "todos";
+
+  // Função para normalizar strings para comparação
+  function normalizeString(str) {
+    return str
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/\s+/g, "-")
+      .replace(/[^\w-]/g, "");
+  }
 
   // Função para filtrar e mostrar os cards
   function filterCards() {
@@ -15,30 +25,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     cards.forEach((card) => {
       const cidade = card.getAttribute("data-cidade");
-      const nomeFornecedor = card
-        .querySelector(".nome-fornecedor")
-        .textContent.toLowerCase();
-      const cidadeText = card
-        .querySelector(".cidade")
-        .textContent.toLowerCase();
-
-      // Verifica se o card corresponde ao filtro ativo
-      let filterMatch = false;
-
-      if (activeFilter === "todos") {
-        filterMatch = true;
-      } else if (activeFilter === cidade) {
-        filterMatch = true;
+      let fornecedor = card.getAttribute("data-fornecedor");
+      
+      // Se não tem data-fornecedor, extrair do nome
+      if (!fornecedor) {
+        const nomeFornecedor = card.querySelector(".nome-fornecedor").textContent;
+        fornecedor = normalizeString(nomeFornecedor);
       }
 
-      // Verifica se o card corresponde ao termo de busca
-      const searchMatch =
-        searchTerm === "" ||
-        nomeFornecedor.includes(searchTerm) ||
-        cidadeText.includes(searchTerm);
+      // Verifica se o card corresponde ao filtro de cidade ativo
+      const cityMatch = activeCityFilter === "todos" || activeCityFilter === cidade;
+      
+      // Verifica se o card corresponde ao filtro de fornecedor ativo
+      let supplierMatch = activeSupplierFilter === "todos";
+      if (!supplierMatch && fornecedor) {
+        supplierMatch = fornecedor.includes(activeSupplierFilter) || 
+                       activeSupplierFilter.includes(fornecedor) ||
+                       normalizeString(fornecedor) === normalizeString(activeSupplierFilter);
+      }
 
       // Mostra ou esconde o card baseado nos filtros
-      if (filterMatch && searchMatch) {
+      if (cityMatch && supplierMatch) {
         card.classList.remove("hidden");
         visibleCount++;
       } else {
@@ -59,43 +66,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Atualiza o contador de resultados
   function updateResultsCounter(count) {
-    if (activeFilter === "todos" && searchTerm === "") {
+    const cityText = cityFilter.options[cityFilter.selectedIndex].text;
+    const supplierText = supplierFilter.options[supplierFilter.selectedIndex].text;
+    
+    if (activeCityFilter === "todos" && activeSupplierFilter === "todos") {
       resultsCounter.textContent = `Mostrando todos os ${count} lojistas`;
-    } else if (activeFilter !== "todos" && searchTerm === "") {
-      const filterText =
-        document.querySelector(".filter-btn.active").textContent;
-      resultsCounter.textContent = `${count} lojistas em ${filterText}`;
-    } else if (activeFilter === "todos" && searchTerm !== "") {
-      resultsCounter.textContent = `${count} resultados para "${searchTerm}"`;
+    } else if (activeCityFilter !== "todos" && activeSupplierFilter === "todos") {
+      resultsCounter.textContent = `${count} lojistas em ${cityText}`;
+    } else if (activeCityFilter === "todos" && activeSupplierFilter !== "todos") {
+      resultsCounter.textContent = `${count} lojas ${supplierText}`;
     } else {
-      const filterText =
-        document.querySelector(".filter-btn.active").textContent;
-      resultsCounter.textContent = `${count} resultados para "${searchTerm}" em ${filterText}`;
+      resultsCounter.textContent = `${count} lojas ${supplierText} em ${cityText}`;
     }
   }
 
-  // Event listeners para os botões de filtro
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      // Remove a classe active de todos os botões
-      filterButtons.forEach((btn) => {
-        btn.classList.remove("active");
-      });
-
-      // Adiciona a classe active ao botão clicado
-      this.classList.add("active");
-
-      // Atualiza o filtro ativo
-      activeFilter = this.getAttribute("data-filter");
-
-      // Aplica os filtros
-      filterCards();
-    });
+  // Event listener para o dropdown de cidade
+  cityFilter.addEventListener("change", function () {
+    activeCityFilter = this.value;
+    filterCards();
   });
 
-  // Event listener para a busca
-  searchInput.addEventListener("input", function () {
-    searchTerm = this.value.toLowerCase().trim();
+  // Event listener para o dropdown de fornecedor
+  supplierFilter.addEventListener("change", function () {
+    activeSupplierFilter = this.value;
     filterCards();
   });
 

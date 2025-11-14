@@ -83,35 +83,41 @@
       <div class="container">
         <!-- Filtros melhorados -->
         <div class="filter-container">
-          <div class="search-container">
-            <i class="fas fa-search search-icon"></i>
-            <input
-              type="text"
-              class="search-input"
-              id="searchInput"
-              placeholder="Buscar por cidade ou nome do fornecedor..."
-            />
-          </div>
-
           <div class="filter-section">
-            <h3><i class="fas fa-filter"></i> Filtros Principais</h3>
-            <div class="filter-buttons">
-              <button class="filter-btn active" data-filter="todos">
-                Todas as Lojas
-              </button>
-              <button class="filter-btn" data-filter="maringa">Maringá</button>
-              <button class="filter-btn" data-filter="paranavai">
-                Paranavaí
-              </button>
-              <button class="filter-btn" data-filter="arapongas">
-                Arapongas
-              </button>
-              <button class="filter-btn" data-filter="umuarama">
-                Umuarama
-              </button>
-              <button class="filter-btn" data-filter="outros">
-                Outras Cidades
-              </button>
+            <h3><i class="fas fa-filter"></i> Filtros</h3>
+            <div class="filters-grid">
+              <div class="filter-dropdown-container">
+                <label class="filter-label">Cidade</label>
+                <select class="filter-dropdown" id="cityFilter">
+                  <option value="todos">Todas as Cidades</option>
+                  <option value="maringa">Maringá</option>
+                  <option value="paranavai">Paranavaí</option>
+                  <option value="arapongas">Arapongas</option>
+                  <option value="umuarama">Umuarama</option>
+                  <option value="ivaipora">Ivaiporã</option>
+                  <option value="guaira">Guaíra</option>
+                  <option value="outros">Outras Cidades</option>
+                </select>
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+              </div>
+
+              <div class="filter-dropdown-container">
+                <label class="filter-label">Fornecedor</label>
+                <select class="filter-dropdown" id="supplierFilter">
+                  <option value="todos">Todos os Fornecedores</option>
+                  <option value="comercial-ivaipora">Comercial Ivaiporã</option>
+                  <option value="japura">Japurá Acabamentos</option>
+                  <option value="bella-pedra">Bella Pedra</option>
+                  <option value="casa-sao-paulo">Casa São Paulo</option>
+                  <option value="igui-piscinas">Igui Piscinas</option>
+                  <option value="mais-casa">Mais Casa</option>
+                  <option value="jatelie">Jateliê</option>
+                  <option value="construmil">Construmil</option>
+                  <option value="casa-grande">Casa Grande Acabamentos</option>
+                  <option value="lazer-piscinas">Lazer Piscinas</option>
+                </select>
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+              </div>
             </div>
           </div>
 
@@ -122,7 +128,7 @@
 
         <div class="cards-container">
           <!-- Fornecedores de Maringá -->
-          <div class="card" data-cidade="maringa">
+          <div class="card" data-cidade="maringa" data-fornecedor="japura">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Maringá</span
@@ -141,7 +147,7 @@
             </a>
           </div>
 
-          <div class="card" data-cidade="maringa">
+          <div class="card" data-cidade="maringa" data-fornecedor="bella-pedra">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Maringá</span
@@ -162,7 +168,7 @@
             </a>
           </div>
 
-          <div class="card" data-cidade="maringa">
+          <div class="card" data-cidade="maringa" data-fornecedor="casa-sao-paulo">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Maringá</span
@@ -181,7 +187,7 @@
             </a>
           </div>
 
-          <div class="card" data-cidade="maringa">
+          <div class="card" data-cidade="maringa" data-fornecedor="igui-piscinas">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Maringá</span
@@ -200,7 +206,7 @@
             </a>
           </div>
 
-          <div class="card" data-cidade="maringa">
+          <div class="card" data-cidade="maringa" data-fornecedor="mais-casa">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Maringá</span
@@ -219,7 +225,7 @@
             </a>
           </div>
 
-          <div class="card" data-cidade="maringa">
+          <div class="card" data-cidade="maringa" data-fornecedor="comercial-ivaipora">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Maringá</span
@@ -240,7 +246,7 @@
           </div>
 
           <!-- Fornecedores de Arapongas -->
-          <div class="card" data-cidade="arapongas">
+          <div class="card" data-cidade="arapongas" data-fornecedor="jatelie">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Arapongas</span
@@ -259,7 +265,7 @@
             </a>
           </div>
 
-          <div class="card" data-cidade="arapongas">
+          <div class="card" data-cidade="arapongas" data-fornecedor="jatelie">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Arapongas</span
@@ -279,7 +285,7 @@
           </div>
 
           <!-- Fornecedores de Umuarama -->
-          <div class="card" data-cidade="umuarama">
+          <div class="card" data-cidade="umuarama" data-fornecedor="construmil">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Umuarama</span
@@ -302,7 +308,7 @@
           </div>
 
           <!-- Jandaia do Sul -->
-          <div class="card" data-cidade="outros">
+          <div class="card" data-cidade="outros" data-fornecedor="casa-sao-paulo">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Jandaia do Sul</span
@@ -403,7 +409,7 @@
           </div>
 
           <!-- Guaíra -->
-          <div class="card" data-cidade="outros">
+          <div class="card" data-cidade="guaira">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Guaíra</span
@@ -544,7 +550,7 @@
           </div>
 
           <!-- Região Centro do PR -->
-          <div class="card" data-cidade="outros">
+          <div class="card" data-cidade="ivaipora">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Ivaiporã</span
@@ -564,7 +570,7 @@
             </a>
           </div>
 
-          <div class="card" data-cidade="outros">
+          <div class="card" data-cidade="ivaipora">
             <div>
               <span class="cidade"
                 ><i class="fas fa-map-marker-alt"></i> Ivaiporã Castelo</span
