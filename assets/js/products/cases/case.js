@@ -227,68 +227,63 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Base de dados de todos os cases disponíveis
 const allCases = [
-  // PISCINAS - Borda Argos
+  // ========== PISCINAS ==========
+  
+  // Borda Argos
   {
-    title: "Casa Moderna",
-    category: "Piscina com Borda Argos",
+    title: "Linha Argos Piscinas",
+    category: "Piscinas de Alvenaria",
     image: "img/case1/slide1.jpg",
     url: "case1.html",
     type: "piscina",
     folder: "borda-argos"
   },
-  {
-    title: "Elegância e Sofisticação",
-    category: "Piscina com Borda Argos",
-    image: "img/case2/slide1.jpg",
-    url: "case2.html",
-    type: "piscina",
-    folder: "borda-argos"
-  },
   
-  // PISCINAS - Borda Creta
+  // Borda Creta
   {
     title: "Edifício Ilha Grande",
-    category: "Piscina com Borda Creta",
-    subtitle: "Construtora Recife",
-    image: "img/case1/slide1.jpg",
+    category: "Piscinas de Alvenaria",
+    subtitle: "Porto São José, PR",
+    image: "img/case1/slide1.png",
     url: "case1.html",
     type: "piscina",
     folder: "borda-creta"
   },
   
-  // PISCINAS - Borda Grécia
+  // Borda Grécia
   {
     title: "Edifício Maison Heritage",
-    category: "Piscina com Borda Grécia",
-    subtitle: "Construtora A. Yoshii",
-    image: "img/case1/slide4.jpg",
+    category: "Piscinas de Alvenaria",
+    subtitle: "Maringá, PR",
+    image: "img/case1/slide1.jpg",
     url: "case1.html",
     type: "piscina",
     folder: "borda-grecia"
   },
   {
     title: "Edifício Cenarium Residence",
-    category: "Piscina com Borda Grécia",
-    image: "img/case2/slide3.jpg",
+    category: "Piscinas de Alvenaria",
+    subtitle: "Maringá, PR",
+    image: "img/case2/slide1.jpg",
     url: "case2.html",
     type: "piscina",
     folder: "borda-grecia"
   },
   {
     title: "Condomínio Village Porto Rico",
-    category: "Piscina com Borda Grécia",
-    subtitle: "Construtora Mondonex",
-    image: "img/case3/slide3.jpg",
+    category: "Piscinas de Alvenaria",
+    subtitle: "Porto Rico, PR",
+    image: "img/case3/slide1.jpg",
     url: "case3.html",
     type: "piscina",
     folder: "borda-grecia"
   },
   
-  // PISCINAS - Borda Hidra
+  // Borda Hidra
   {
     title: "Edifício Maison Lumini",
-    category: "Piscina com Borda Hidra",
-    subtitle: "Construtora A. Yoshii",
+    category: "Piscinas de Alvenaria",
+    subtitle: "Maringá, PR",
     image: "img/case1/slide1.jpg",
     url: "case1.html",
     type: "piscina",
@@ -296,193 +291,295 @@ const allCases = [
   },
   {
     title: "Edifício Maison Lumini 2",
-    category: "Piscina com Borda Hidra",
-    subtitle: "Construtora A. Yoshii",
+    category: "Piscinas de Alvenaria",
+    subtitle: "Maringá, PR",
     image: "img/case2/slide1.jpg",
     url: "case2.html",
     type: "piscina",
     folder: "borda-hidra"
   },
   
-  // PISCINAS - Borda Milos
+  // Borda Milos
   {
     title: "Country Club de Maringá",
-    category: "Piscina com Borda Milos",
-    image: "img/case1/slide4.jpeg",
+    category: "Piscinas de Alvenaria",
+    subtitle: "Maringá, PR",
+    image: "img/case1/slide1.JPG",
     url: "case1.html",
     type: "piscina",
     folder: "borda-milos"
   },
   {
     title: "Edifício Maison Heritage",
-    category: "Piscina com Borda Milos",
-    subtitle: "Construtora A. Yoshii",
-    image: "img/case2/slide2.jpg",
+    category: "Piscinas de Alvenaria",
+    subtitle: "Maringá, PR",
+    image: "img/case2/slide1.JPG",
     url: "case2.html",
     type: "piscina",
     folder: "borda-milos"
   },
   
-  // REVESTIMENTOS - Travertino
+  // Grelha
   {
-    title: "Projeto Residencial Premium",
-    category: "Revestimento Travertino",
+    title: "Grelha em Ambiente Moderno",
+    category: "Piscinas de Alvenaria",
+    image: "img/case1/slide1.jpg",
+    url: "case1.html",
+    type: "piscina",
+    folder: "grelha"
+  },
+  
+  // Piso Etrusco
+  {
+    title: "Piso Etrusco em Ambiente Moderno",
+    category: "Piscinas de Alvenaria",
+    image: "img/case1/slide1.jpeg",
+    url: "case1.html",
+    type: "piscina",
+    folder: "piso-etrusco"
+  },
+  
+  // Piso Genérico
+  {
+    title: "Piso m² em Ambiente Moderno",
+    category: "Piscinas de Alvenaria",
+    image: "img/case1/slide1.jpeg",
+    url: "case1.html",
+    type: "piscina",
+    folder: "piso-generico"
+  },
+  
+  // ========== REVESTIMENTOS ==========
+  
+  // Arezo
+  {
+    title: "Casa Moderna com Arezo",
+    category: "Revestimentos",
     image: "img/case1/slide1.jpg",
     url: "case1.html",
     type: "revestimento",
-    folder: "travertino"
-  },
-  {
-    title: "Casa Moderna",
-    category: "Revestimento Travertino",
-    image: "img/case2/slide1.jpg",
-    url: "case2.html",
-    type: "revestimento",
-    folder: "travertino"
+    folder: "arezo"
   },
   
-  // REVESTIMENTOS - Tijolinho Demolição
+  // Cobogó
   {
-    title: "Fachada Industrial",
-    category: "Tijolinho Demolição",
+    title: "Casa AG",
+    category: "Revestimentos",
+    image: "img/case1/slide1.jpeg",
+    url: "case1.html",
+    type: "revestimento",
+    folder: "cobogo"
+  },
+  
+  // Delfos
+  {
+    title: "Casa Moderna com Delfos",
+    category: "Revestimentos",
+    image: "img/case1/slide1.jpeg",
+    url: "case1.html",
+    type: "revestimento",
+    folder: "delfos"
+  },
+  
+  // Erétria
+  {
+    title: "Erétria Externo e Interno",
+    category: "Revestimentos",
     image: "img/case1/slide1.jpg",
     url: "case1.html",
     type: "revestimento",
-    folder: "tijolinho-demolicao"
+    folder: "eretria"
   },
   {
-    title: "Ambiente Rústico",
-    category: "Tijolinho Demolição",
-    image: "img/case2/slide1.jpg",
+    title: "Casa Moderna Erétria",
+    category: "Revestimentos",
+    image: "img/case2/slide1.jpeg",
     url: "case2.html",
     type: "revestimento",
-    folder: "tijolinho-demolicao"
+    folder: "eretria"
   },
   
-  // REVESTIMENTOS - Ripado
+  // Etrusco
   {
-    title: "Design Contemporâneo",
-    category: "Revestimento Ripado",
-    image: "img/case1/slide1.jpg",
+    title: "Casa Moderna com Etrusco",
+    category: "Revestimentos",
+    image: "img/case1/slide1.jpeg",
     url: "case1.html",
     type: "revestimento",
-    folder: "ripado"
-  },
-  {
-    title: "Elegância Minimalista",
-    category: "Revestimento Ripado",
-    image: "img/case2/slide1.jpg",
-    url: "case2.html",
-    type: "revestimento",
-    folder: "ripado"
+    folder: "etrusco"
   },
   
-  // REVESTIMENTOS - Placa
+  // Gravata
   {
-    title: "Residência Moderna",
-    category: "Revestimento Placa",
-    image: "img/case1/slide1.jpg",
+    title: "Casa Moderna com Gravata",
+    category: "Revestimentos",
+    image: "img/case1/slide1.JPEG",
     url: "case1.html",
     type: "revestimento",
-    folder: "placa"
-  },
-  {
-    title: "Projeto Arquitetônico",
-    category: "Revestimento Placa",
-    image: "img/case2/slide1.jpg",
-    url: "case2.html",
-    type: "revestimento",
-    folder: "placa"
+    folder: "gravata"
   },
   
-  // REVESTIMENTOS - Mosaico Etrusco
+  // Moledo
   {
-    title: "Arte em Revestimento",
-    category: "Mosaico Etrusco",
+    title: "Casa Paranapanema",
+    category: "Revestimentos",
+    subtitle: "Paranapanema, PR",
+    image: "img/case1/slide1.jpeg",
+    url: "case1.html",
+    type: "revestimento",
+    folder: "moledo"
+  },
+  {
+    title: "Revestimento Moledo Piscinas Igui",
+    category: "Revestimentos",
+    image: "img/case2/slide1.jpeg",
+    url: "case2.html",
+    type: "revestimento",
+    folder: "moledo"
+  },
+  
+  // Mosaico Etrusco
+  {
+    title: "Casa com Mosaico Etrusco",
+    category: "Revestimentos",
+    subtitle: "Maringá, PR",
     image: "img/case1/slide1.jpg",
     url: "case1.html",
     type: "revestimento",
     folder: "mosaico-etrusco"
   },
   {
-    title: "Design Sofisticado",
-    category: "Mosaico Etrusco",
+    title: "Projeto Moderno Mosaico Etrusco",
+    category: "Revestimentos",
     image: "img/case2/slide1.jpg",
     url: "case2.html",
     type: "revestimento",
     folder: "mosaico-etrusco"
   },
   
-  // REVESTIMENTOS - Moledo
+  // Placa
   {
-    title: "Textura Premium",
-    category: "Revestimento Moledo",
+    title: "Placa em Ambiente Moderno",
+    category: "Revestimentos",
     image: "img/case1/slide1.jpg",
     url: "case1.html",
     type: "revestimento",
-    folder: "moledo"
+    folder: "placa"
   },
   {
-    title: "Estilo Contemporâneo",
-    category: "Revestimento Moledo",
-    image: "img/case2/slide1.jpg",
+    title: "Casa Moderna com Placa",
+    category: "Revestimentos",
+    image: "img/case2/slide1.jpeg",
     url: "case2.html",
     type: "revestimento",
-    folder: "moledo"
+    folder: "placa"
   },
   
-  // REVESTIMENTOS - Cobogó
+  // Salônica
   {
-    title: "Ventilação e Design",
-    category: "Revestimento Cobogó",
+    title: "Casa Moderna com Salônica",
+    category: "Revestimentos",
     image: "img/case1/slide1.jpg",
     url: "case1.html",
     type: "revestimento",
-    folder: "cobogo"
+    folder: "salonica"
   },
   {
-    title: "Arquitetura Funcional",
-    category: "Revestimento Cobogó",
-    image: "img/case2/slide1.jpg",
+    title: "Painel Salônica",
+    category: "Revestimentos",
+    image: "img/case2/slide1.jpeg",
     url: "case2.html",
     type: "revestimento",
-    folder: "cobogo"
+    folder: "salonica"
   },
   
-  // REVESTIMENTOS - Tijolinho Travertino
+  // Santorini
   {
-    title: "Combinação Perfeita",
-    category: "Tijolinho Travertino",
-    image: "img/case1/slide1.jpg",
-    url: "case1.html",
-    type: "revestimento",
-    folder: "tijolinho-travertino"
-  },
-  {
-    title: "Charme Natural",
-    category: "Tijolinho Travertino",
-    image: "img/case2/slide1.jpg",
-    url: "case2.html",
-    type: "revestimento",
-    folder: "tijolinho-travertino"
-  },
-  
-  // REVESTIMENTOS - Santorini
-  {
-    title: "Inspiração Mediterrânea",
-    category: "Revestimento Santorini",
+    title: "Projeto com Etrusco e Travertino",
+    category: "Revestimentos",
+    subtitle: "Maringá, PR",
     image: "img/case1/slide1.jpg",
     url: "case1.html",
     type: "revestimento",
     folder: "santorini"
   },
   {
-    title: "Beleza Grega",
-    category: "Revestimento Santorini",
+    title: "Casa Santorini",
+    category: "Revestimentos",
     image: "img/case2/slide1.jpg",
     url: "case2.html",
     type: "revestimento",
     folder: "santorini"
+  },
+  
+  // Tebas
+  {
+    title: "Casa Moderna com Tebas",
+    category: "Revestimentos",
+    image: "img/case1/slide1.jpeg",
+    url: "case1.html",
+    type: "revestimento",
+    folder: "tebas"
+  },
+  
+  // Tijolinho Demolição
+  {
+    title: "Casa Moderna com Tijolinho Demolição",
+    category: "Revestimentos",
+    image: "img/case1/slide1.jpeg",
+    url: "case1.html",
+    type: "revestimento",
+    folder: "tijolinho-demolicao"
+  },
+  
+  // Tijolinho Travertino
+  {
+    title: "Tijolinho Travertino Piscinas Igui Maringá",
+    category: "Revestimentos",
+    subtitle: "Maringá, PR",
+    image: "img/case1/slide1.jpeg",
+    url: "case1.html",
+    type: "revestimento",
+    folder: "tijolinho-travertino"
+  },
+  {
+    title: "Tijolinho Travertino Piscinas Igui Cianorte",
+    category: "Revestimentos",
+    subtitle: "Cianorte, PR",
+    image: "img/case2/slide1.jpeg",
+    url: "case2.html",
+    type: "revestimento",
+    folder: "tijolinho-travertino"
+  },
+  
+  // Travertino
+  {
+    title: "Travertino em Ambiente Externo e Interno",
+    category: "Revestimentos",
+    image: "img/case1/slide1.jpeg",
+    url: "case1.html",
+    type: "revestimento",
+    folder: "travertino"
+  },
+  
+  // Véria
+  {
+    title: "Véria em Ambiente Moderno",
+    category: "Revestimentos",
+    image: "img/case1/slide1.jpeg",
+    url: "case1.html",
+    type: "revestimento",
+    folder: "veria"
+  },
+  
+  // Volos
+  {
+    title: "Casa Moderna com Volos",
+    category: "Revestimentos",
+    image: "img/case1/slide1.jpeg",
+    url: "case1.html",
+    type: "revestimento",
+    folder: "volos"
   },
 ];
 

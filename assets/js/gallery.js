@@ -46,43 +46,47 @@ const prevBtn = document.querySelector('.prev-modal');
 const nextBtn = document.querySelector('.next-modal');
 
 let currentImageIndex = 0;
-let visibleImages = [];
+let currentProjectImages = [];
+let currentProjectTitle = '';
+let currentProjectDescription = '';
 
 // Update visible images array based on current filter
 function updateVisibleImages() {
-  visibleImages = Array.from(galleryItems).filter(item => {
-    return item.style.display !== 'none';
+  const visibleImages = Array.from(galleryItems).filter(item => {
+    return item.style.display !== 'none' && !item.classList.contains('hidden-item');
+  });
+  return visibleImages;
+}
+
+// Função para obter todas as imagens de um projeto
+function getProjectImages(caseUrl) {
+  // O modal não deve navegar entre projetos, apenas fechar
+  // Esta função foi removida pois o comportamento esperado é mostrar apenas a imagem clicada
+  return [];
+}
+
+// Função para anexar event listeners aos botões de visualização
+function attachViewButtonListeners() {
+  const viewButtons = document.querySelectorAll('.view-btn');
+  viewButtons.forEach((btn) => {
+    // Remove listener anterior para evitar duplicação
+    const newBtn = btn.cloneNode(true);
+    btn.parentNode.replaceChild(newBtn, btn);
+    
+    newBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      // Redirecionar diretamente para a página do case
+      const caseUrl = newBtn.getAttribute('href');
+      if (caseUrl) {
+        window.location.href = caseUrl;
+      }
+    });
   });
 }
 
-// Open modal
-const viewButtons = document.querySelectorAll('.view-btn');
-viewButtons.forEach((btn, index) => {
-  btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    
-    const galleryItem = btn.closest('.gallery-item');
-    const img = galleryItem.querySelector('.gallery-image img');
-    const title = galleryItem.querySelector('.gallery-info h3').textContent;
-    const description = galleryItem.querySelector('.gallery-info p').textContent;
-    
-    // Update visible images
-    updateVisibleImages();
-    
-    // Find current index in visible images
-    currentImageIndex = visibleImages.indexOf(galleryItem);
-    
-    // Set modal content
-    modalImg.src = img.src;
-    modalImg.alt = title;
-    modalTitle.textContent = title;
-    modalDescription.textContent = description;
-    
-    // Show modal
-    modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-  });
-});
+// Open modal - inicializar na primeira carga
+attachViewButtonListeners();
 
 // Close modal
 closeBtn.addEventListener('click', closeModal);
@@ -98,96 +102,36 @@ function closeModal() {
   document.body.style.overflow = 'auto';
 }
 
-// Navigate modal - Previous
-prevBtn.addEventListener('click', () => {
-  currentImageIndex = (currentImageIndex - 1 + visibleImages.length) % visibleImages.length;
-  updateModalContent();
-});
-
-// Navigate modal - Next
-nextBtn.addEventListener('click', () => {
-  currentImageIndex = (currentImageIndex + 1) % visibleImages.length;
-  updateModalContent();
-});
-
-function updateModalContent() {
-  const currentItem = visibleImages[currentImageIndex];
-  const img = currentItem.querySelector('.gallery-image img');
-  const title = currentItem.querySelector('.gallery-info h3').textContent;
-  const description = currentItem.querySelector('.gallery-info p').textContent;
-  
-  // Fade out effect
-  modalImg.style.opacity = '0';
-  
-  setTimeout(() => {
-    modalImg.src = img.src;
-    modalImg.alt = title;
-    modalTitle.textContent = title;
-    modalDescription.textContent = description;
-    
-    // Fade in effect
-    modalImg.style.opacity = '1';
-  }, 200);
-}
-
 // Keyboard navigation
 document.addEventListener('keydown', (e) => {
   if (modal.style.display === 'block') {
     if (e.key === 'Escape') {
       closeModal();
-    } else if (e.key === 'ArrowLeft') {
-      prevBtn.click();
-    } else if (e.key === 'ArrowRight') {
-      nextBtn.click();
     }
   }
 });
 
 // ========================================
-// LOAD MORE BUTTON (OPCIONAL)
+// LOAD MORE BUTTON
 // ========================================
 const loadMoreBtn = document.querySelector('.load-more-btn');
+let hiddenItems = document.querySelectorAll('.gallery-item.hidden-item');
 
 if (loadMoreBtn) {
   loadMoreBtn.addEventListener('click', () => {
-    // Adicionar lógica para carregar mais imagens
-    // Por enquanto, apenas um exemplo de feedback
-    loadMoreBtn.textContent = 'Carregando...';
+    // Mostrar todos os itens ocultos
+    hiddenItems.forEach(item => {
+      item.classList.remove('hidden-item');
+      item.classList.add('show');
+      item.style.display = 'block';
+    });
     
-    setTimeout(() => {
-      loadMoreBtn.textContent = 'Carregar Mais Projetos';
-      // Aqui você pode adicionar mais itens à galeria dinamicamente
-    }, 1000);
+    // Esconder o botão após carregar
+    loadMoreBtn.style.display = 'none';
+    
+    // Atualizar event listeners
+    attachViewButtonListeners();
   });
-}
-
-// ========================================
-// TOUCH/SWIPE SUPPORT FOR MOBILE
-// ========================================
-let touchStartX = 0;
-let touchEndX = 0;
-
-modalImg.addEventListener('touchstart', (e) => {
-  touchStartX = e.changedTouches[0].screenX;
-}, { passive: true });
-
-modalImg.addEventListener('touchend', (e) => {
-  touchEndX = e.changedTouches[0].screenX;
-  handleSwipe();
-}, { passive: true });
-
-function handleSwipe() {
-  const swipeThreshold = 50;
-  
-  if (touchEndX < touchStartX - swipeThreshold) {
-    // Swipe left - next image
-    nextBtn.click();
-  }
-  
-  if (touchEndX > touchStartX + swipeThreshold) {
-    // Swipe right - previous image
-    prevBtn.click();
-  }
 }
 
 // ========================================
@@ -196,6 +140,3 @@ function handleSwipe() {
 window.addEventListener('load', () => {
   modalImg.style.transition = 'opacity 0.3s ease';
 });
-
-// Initialize visible images on load
-updateVisibleImages();
