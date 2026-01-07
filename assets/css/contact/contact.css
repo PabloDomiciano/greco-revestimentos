@@ -168,7 +168,7 @@
     transform: translate(-50%, -50%);
     width: calc(100% - 120px);
     max-width: calc(100% - 120px);
-    text-align: left;
+    text-align: center;
     padding: 30px 35px;
   }
 
@@ -230,6 +230,7 @@
     width: calc(100% - 100px);
     max-width: calc(100% - 100px);
     padding: 25px 30px;
+    text-align: center;
   }
 
   .hero-contact-content h1 {
@@ -243,6 +244,8 @@
   .hero-contact .cta-button {
     padding: 10px 20px;
     font-size: 0.9rem;
+    display: block;
+    margin: 0 auto;
   }
 
   .hero-contact .contact-social-sidebar {
