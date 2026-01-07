@@ -129,11 +129,29 @@
   background: var(--secondary-color);
   border-radius: 12px;
   min-height: 200px;
+  display: none; /* Escondido por padrão, substituído pela logo */
+}
+
+/* Logo Greco - Inferior Direito */
+.case-logo-section {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.case-logo-section img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  filter: drop-shadow(0 4px 12px rgba(8, 21, 53, 0.1));
 }
 
 /* Créditos Section - Inferior Direito */
 .case-credits-section {
-  grid-column: 2;
+  grid-column: 1;
   grid-row: 2;
   background: var(--secondary-color);
   padding: 30px;
@@ -719,6 +737,16 @@
 
   .case-empty-space {
     display: none;
+  }
+
+  .case-logo-section {
+    grid-column: 1;
+    grid-row: 5;
+    padding: 30px;
+  }
+
+  .case-logo-section img {
+    max-width: 280px;
   }
 
   .case-slider {
