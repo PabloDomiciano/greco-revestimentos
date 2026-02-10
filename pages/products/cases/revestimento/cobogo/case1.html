@@ -57,7 +57,7 @@
           <i class="fas fa-chevron-right"></i>
           <a href="../../../../gallery.html">Galeria</a>
           <i class="fas fa-chevron-right"></i>
-          <span>Casa AG</span>
+          <span>Projeto Integrado: Cobogó e Etrusco</span>
         </div>
       </div>
     </section>
@@ -71,7 +71,7 @@
             <i class="fas fa-brush"></i>
             Revestimentos
           </span>
-          <h1 class="case-title">Casa AG</h1>
+          <h1 class="case-title">Projeto Integrado: Cobogó e Etrusco</h1>
         </div>
 
         <!-- Case Main Section - Slider + Info -->
@@ -82,16 +82,31 @@
               <div class="case-slide active">
                 <img
                   src="./img/case1/slide1.jpeg"
-                  alt="Vista geral da piscina"
+                  alt="Cobogó - Vista geral"
                 />
               </div>
               <div class="case-slide">
-                <img src="./img/case1/slide2.jpeg" alt="Detalhe da borda" />
+                <img src="./img/case1/slide2.jpeg" alt="Cobogó - Detalhe" />
               </div>
               <div class="case-slide">
                 <img
                   src="./img/case1/slide3.jpeg"
-                  alt="Área de lazer completa"
+                  alt="Cobogó - Composição"
+                />
+              </div>
+              <div class="case-slide">
+                <img
+                  src="../etrusco/img/case1/slide1.jpeg"
+                  alt="Etrusco - Vista geral"
+                />
+              </div>
+              <div class="case-slide">
+                <img src="../etrusco/img/case1/slide2.jpeg" alt="Etrusco - Detalhe" />
+              </div>
+              <div class="case-slide">
+                <img
+                  src="../etrusco/img/case1/slide3.jpeg"
+                  alt="Etrusco - Textura"
                 />
               </div>
             </div>
@@ -105,6 +120,9 @@
               <span class="dot active" data-slide="0"></span>
               <span class="dot" data-slide="1"></span>
               <span class="dot" data-slide="2"></span>
+              <span class="dot" data-slide="3"></span>
+              <span class="dot" data-slide="4"></span>
+              <span class="dot" data-slide="5"></span>
             </div>
           </div>
 
@@ -125,6 +143,12 @@
                 arquitetura contemporânea, transformando a fachada em elemento
                 de destaque que combina função e beleza de maneira equilibrada.
               </p>
+              <p class="info-text">
+                O Revestimento Etrusco complementa perfeitamente esta composição,
+                trazendo textura marcante e tonalidade natural que valorizam a
+                arquitetura, criando equilíbrio harmonioso entre modernidade e
+                aconchego.
+              </p>
 
               <!-- Produtos Utilizados -->
               <div class="info-products">
@@ -137,22 +161,10 @@
                     <i class="fas fa-th"></i>
                     <span>Revestimento Cobogó</span>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Créditos - Inferior Direito -->
-          <div class="case-credits-section">
-            <h3 class="credits-section-title">
-              <i class="fas fa-users"></i>
-              Créditos do Projeto
-            </h3>
-            <div class="credits-list">
-              <div class="credit-item">
-                <div class="credit-info">
-                  <span class="credit-label" style="text-decoration: underline; font-weight: 600;">Execução</span>
-                  <span class="credit-name">Construções Premium</span>
+                  <div class="product-tag">
+                    <i class="fas fa-th"></i>
+                    <span>Revestimento Etrusco</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -160,7 +172,7 @@
 
           <!-- Logo Greco - Inferior Direito -->
           <div class="case-logo-section">
-            <img src="../../../../../assets/logo.png" alt="Greco Revestimentos">
+            <img src="../../../../../assets/logo.png" alt="Greco Revestimentos" style="max-width: 120px;">
           </div>
         </div>
 
@@ -259,7 +271,7 @@
               </div>
             </a>
             <p>
-              Especialistas em revestimentos premium, transformando espaços com
+              Especialistas em revestimentos cimentícios, transformando espaços com
               qualidade, inovação e design minimalista.
             </p>
             <div class="social-links">
@@ -281,28 +293,15 @@
           <div class="footer-col">
             <h4>Produtos</h4>
             <ul class="footer-links">
-              <li><a href="#">Revestimento em Fibra</a></li>
-              <li><a href="#">Revestimento Cerâmico</a></li>
-              <li><a href="#">Revestimento Premium</a></li>
-              <li><a href="#">Revestimento Texturizado</a></li>
-              <li><a href="#">Acessórios</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Suporte</h4>
-            <ul class="footer-links">
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Manual de Instalação</a></li>
-              <li><a href="#">Manutenção</a></li>
-              <li><a href="#">Garantia</a></li>
-              <li><a href="#">Política de Privacidade</a></li>
+              <li><a href="#">Linha de Piscinas</a></li>
+              <li><a href="#">Linha de Paredes</a></li>
             </ul>
           </div>
         </div>
         <div class="footer-bottom">
           <p>
             &copy; 2025 GRECO. Todos os direitos reservados. Revestimentos
-            Premium.
+            Cimentícios.
           </p>
         </div>
       </div>
@@ -310,5 +309,11 @@
 
     <script src="../../../../../assets/js/header.js"></script>
     <script src="../../../../../assets/js/products/cases/case.js"></script>
+    <script src="../../../../../assets/js/cases-data.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        renderRelatedCases('cobogo-case1', 'revestimento');
+      });
+    </script>
   </body>
 </html>

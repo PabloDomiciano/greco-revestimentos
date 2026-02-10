@@ -119,7 +119,7 @@
 - pisos para piscina
 - bordas de piscina
 - greco revestimentos
-- revestimentos premium
+- revestimentos cimentícios
 
 ### Secundárias:
 - pisos externos
