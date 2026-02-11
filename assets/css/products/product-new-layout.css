@@ -342,15 +342,19 @@ body {
     letter-spacing: 1.5px;
   }
   
-  .panel-table,
-  .panel-table tbody,
-  .panel-table tr,
-  .panel-table td {
+  .panel-table {
+    display: block;
+    width: 100%;
+  }
+  
+  .panel-table thead {
     display: block;
     width: 100%;
   }
   
   .panel-table tr {
+    display: block;
+    width: 100%;
     margin-bottom: 0;
     background: transparent;
     border-radius: 0;
@@ -358,7 +362,10 @@ body {
     border: none;
   }
   
-  .panel-table td {
+  /* Regra geral para células normais (não measure-row) */
+  .panel-table td:not(.measure-row) {
+    display: block;
+    width: 100%;
     text-align: left;
     padding: 12px 15px;
     position: relative;
@@ -366,11 +373,11 @@ body {
     font-size: 0.95rem;
   }
   
-  .panel-table td:last-child {
+  .panel-table td:not(.measure-row):last-child {
     border-bottom: none;
   }
   
-  .panel-table td:before {
+  .panel-table td:not(.measure-row):before {
     content: attr(data-label);
     display: block;
     font-weight: 600;
@@ -381,10 +388,21 @@ body {
     margin-bottom: 5px;
   }
   
-  /* Estilização especial para as células da tabela de medidas */
+  /* Estilização especial para tabela de medidas com Grid */
+  .panel-table tbody {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  .panel-table tbody tr {
+    display: contents !important;
+  }
+  
+  /* Células de medidas no mobile */
   .panel-table .measure-row {
+    display: block !important;
     width: 100% !important;
-    display: block;
     margin-bottom: 0;
     padding: 0 !important;
     background: transparent;
@@ -392,13 +410,19 @@ body {
   }
   
   .panel-table .measure-row:before {
-    display: none;
+    display: none !important;
   }
   
-  .panel-table tbody tr {
-    display: flex;
-    flex-direction: column;
-  }
+  /* Reorganiza as medidas em ordem sequencial no mobile usando Grid */
+  .panel-table .measure-row[data-order="1"] { grid-row: 1; }
+  .panel-table .measure-row[data-order="2"] { grid-row: 2; }
+  .panel-table .measure-row[data-order="3"] { grid-row: 3; }
+  .panel-table .measure-row[data-order="4"] { grid-row: 4; }
+  .panel-table .measure-row[data-order="5"] { grid-row: 5; }
+  .panel-table .measure-row[data-order="6"] { grid-row: 6; }
+  .panel-table .measure-row[data-order="7"] { grid-row: 7; }
+  .panel-table .measure-row[data-order="8"] { grid-row: 8; }
+  .panel-table .measure-row[data-order="9"] { grid-row: 9; }
 
   .measure-header {
     padding: 12px 15px;
