@@ -351,11 +351,11 @@ body {
   }
   
   .panel-table tr {
-    margin-bottom: 25px;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 0;
+    background: transparent;
+    border-radius: 0;
+    overflow: visible;
+    border: none;
   }
   
   .panel-table td {
@@ -385,6 +385,14 @@ body {
   .panel-table .measure-row {
     width: 100% !important;
     display: block;
+    margin-bottom: 0;
+    padding: 0 !important;
+    background: transparent;
+    border: none;
+  }
+  
+  .panel-table .measure-row:before {
+    display: none;
   }
   
   .panel-table tbody tr {
@@ -395,10 +403,17 @@ body {
   .measure-header {
     padding: 12px 15px;
     font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 0;
   }
 
   .measure-row.active .measure-content {
     padding: 12px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .measure-content {
+    border-bottom: 0;
   }
 }
 
