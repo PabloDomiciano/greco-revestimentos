@@ -62,7 +62,7 @@ const casesData = {
       title: 'Residencial Costa Azul',
       subtitle: 'Borda Grécia - por Equipe Atlas Piscinas',
       link: '../borda-grecia/case4.html',
-      image: '../borda-grecia/img/fibra/case4/IMG_2946.jpg',
+      image: '../borda-grecia/img/fibra/case4/slide1.jpg',
       category: 'piscina'
     },
     {
@@ -70,7 +70,7 @@ const casesData = {
       title: 'Condomínio Reserva das Águas',
       subtitle: 'Borda Grécia - por Construtora Horizonte',
       link: '../borda-grecia/case5.html',
-      image: '../borda-grecia/img/fibra/case5/IMG_8832.jpg',
+      image: '../borda-grecia/img/fibra/case5/slide1.jpg',
       category: 'piscina'
     },
     {
@@ -78,7 +78,7 @@ const casesData = {
       title: 'Casa Jardim Imperial',
       subtitle: 'Borda Grécia - por Studio Litoral Arquitetura',
       link: '../borda-grecia/case6.html',
-      image: '../borda-grecia/img/fibra/case6/6ec68bce-25c3-4e72-81e9-9da3ad84728c.jpg',
+      image: '../borda-grecia/img/fibra/case6/slide1.jpg',
       category: 'piscina'
     },
     {
