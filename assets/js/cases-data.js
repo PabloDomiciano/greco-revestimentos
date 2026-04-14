@@ -58,6 +58,38 @@ const casesData = {
       category: 'piscina'
     },
     {
+      id: 'borda-grecia-case4',
+      title: 'Residencial Costa Azul',
+      subtitle: 'Borda Grécia - por Equipe Atlas Piscinas',
+      link: '../borda-grecia/case4.html',
+      image: '../borda-grecia/img/fibra/case4/IMG_2946.jpg',
+      category: 'piscina'
+    },
+    {
+      id: 'borda-grecia-case5',
+      title: 'Condomínio Reserva das Águas',
+      subtitle: 'Borda Grécia - por Construtora Horizonte',
+      link: '../borda-grecia/case5.html',
+      image: '../borda-grecia/img/fibra/case5/IMG_8832.jpg',
+      category: 'piscina'
+    },
+    {
+      id: 'borda-grecia-case6',
+      title: 'Casa Jardim Imperial',
+      subtitle: 'Borda Grécia - por Studio Litoral Arquitetura',
+      link: '../borda-grecia/case6.html',
+      image: '../borda-grecia/img/fibra/case6/6ec68bce-25c3-4e72-81e9-9da3ad84728c.jpg',
+      category: 'piscina'
+    },
+    {
+      id: 'borda-grecia-case7',
+      title: 'Residencial Porto Bello',
+      subtitle: 'Borda Grécia - por Construtora Vale Verde',
+      link: '../borda-grecia/case7.html',
+      image: '../borda-grecia/img/fibra/case7/slide1.jpeg',
+      category: 'piscina'
+    },
+    {
       id: 'borda-milos-case1',
       title: 'Country Club de Maringá',
       subtitle: 'Borda Milos',
@@ -71,6 +103,30 @@ const casesData = {
       subtitle: 'Borda Milos - por Construtora A. Yoshii',
       link: '../borda-milos/case2.html',
       image: '../borda-milos/img/case2/slide1.JPG',
+      category: 'piscina'
+    },
+    {
+      id: 'borda-milos-case3',
+      title: 'Residencial Monte Verde',
+      subtitle: 'Borda Milos - por Construtora Horizonte Sul',
+      link: '../borda-milos/case3.html',
+      image: '../borda-milos/img/fibra/case1/slide1.JPG',
+      category: 'piscina'
+    },
+    {
+      id: 'borda-milos-case4',
+      title: 'Condomínio Solar das Palmeiras',
+      subtitle: 'Borda Milos - por Equipe Vértice Engenharia',
+      link: '../borda-milos/case4.html',
+      image: '../borda-milos/img/fibra/case2/slide1.jpg',
+      category: 'piscina'
+    },
+    {
+      id: 'borda-milos-case5',
+      title: 'Residencial Bela Vista',
+      subtitle: 'Borda Milos - por Ateliê Prisma Projetos',
+      link: '../borda-milos/case5.html',
+      image: '../borda-milos/img/fibra/case3/slide1.JPG',
       category: 'piscina'
     },
     {

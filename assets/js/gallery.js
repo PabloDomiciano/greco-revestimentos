@@ -53,7 +53,7 @@ let currentProjectDescription = '';
 // Update visible images array based on current filter
 function updateVisibleImages() {
   const visibleImages = Array.from(galleryItems).filter(item => {
-    return item.style.display !== 'none' && !item.classList.contains('hidden-item');
+    return item.style.display !== 'none';
   });
   return visibleImages;
 }
@@ -110,29 +110,6 @@ document.addEventListener('keydown', (e) => {
     }
   }
 });
-
-// ========================================
-// LOAD MORE BUTTON
-// ========================================
-const loadMoreBtn = document.querySelector('.load-more-btn');
-let hiddenItems = document.querySelectorAll('.gallery-item.hidden-item');
-
-if (loadMoreBtn) {
-  loadMoreBtn.addEventListener('click', () => {
-    // Mostrar todos os itens ocultos
-    hiddenItems.forEach(item => {
-      item.classList.remove('hidden-item');
-      item.classList.add('show');
-      item.style.display = 'block';
-    });
-    
-    // Esconder o botão após carregar
-    loadMoreBtn.style.display = 'none';
-    
-    // Atualizar event listeners
-    attachViewButtonListeners();
-  });
-}
 
 // ========================================
 // SMOOTH FADE-IN ON PAGE LOAD
